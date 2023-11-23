@@ -465,20 +465,8 @@ body.light .btn-border:hover,
 }
 .btns .btn {
   margin: 5px;
-  background: #009b87 ;
-  color: #fff;
-border-style: initial;
-  border-color: #009b87;
 }
 
-.btns .btn:hover {
-  color: #fff !important;
-  background: #009b87 !important;
-  text-shadow: 0 0 5px #ffffff,
-  0 0 20px #ffffff;
-  box-shadow: 0 0 1px #009b87;
-  transition: all 0.3s ease-in-out;
-}
 
 @media (max-width: 400px) {
   .btns .btn {
@@ -1744,17 +1732,6 @@ body.light .block-title {
   height: 38px;
   line-height: 38px;
   margin-left: 3px;
-  border-style: solid;
-  border-color: gray;
-
-}
-.btns-table .btn:hover {
-  color: #fff;
-  background: #009b87 ;
-  text-shadow: 0 0 5px #fff,
-  0 0 20px #fff;
-  box-shadow: 0 0 1px #009b87;
-  transition: all 0.3s ease-in-out;
 }
 .btns-table .btn.active,
 .btns-table.d-grid .btn.active,
@@ -3261,6 +3238,7 @@ body.light .referral-info .item {
 .checked-item {
   cursor: pointer;
 }
+
 .card-item {
   padding: 10px;
   margin: 5px;
