@@ -1,0 +1,14 @@
+var wordifyfa=function(num,level){'use strict';if(num===null){return "";}
+if(num<0){num=num*-1;return "منفی "+wordifyfa(num,level);}
+if(num===0){if(level===0){return "صفر";}else{return "";}}
+var result="",yekan=[" یک "," دو "," سه "," چهار "," پنج "," شش "," هفت "," هشت "," نه "],dahgan=[" بیست "," سی "," چهل "," پنجاه "," شصت "," هفتاد "," هشتاد "," نود "],sadgan=[" یکصد "," دویست "," سیصد "," چهارصد "," پانصد "," ششصد "," هفتصد "," هشتصد "," نهصد "],dah=[" ده "," یازده "," دوازده "," سیزده "," چهارده "," پانزده "," شانزده "," هفده "," هیجده "," نوزده "];if(level>0){result+=" و ";level-=1;}
+if(num<10){result+=yekan[num-1];}else if(num<20){result+=dah[num-10];}else if(num<100){result+=dahgan[parseInt(num/10,10)-2]+wordifyfa(num%10,level+1);}else if(num<1000){result+=sadgan[parseInt(num/100,10)-1]+wordifyfa(num%100,level+1);}else if(num<1000000){result+=wordifyfa(parseInt(num/1000,10),level)+" هزار "+wordifyfa(num%1000,level+1);}else if(num<1000000000){result+=wordifyfa(parseInt(num/1000000,10),level)+" میلیون "+wordifyfa(num%1000000,level+1);}else if(num<1000000000000){result+=wordifyfa(parseInt(num/1000000000,10),level)+" میلیارد "+wordifyfa(num%1000000000,level+1);}else if(num<1000000000000000){result+=wordifyfa(parseInt(num/1000000000000,10),level)+" تریلیارد "+wordifyfa(num%1000000000000,level+1);}
+return result;};var wordifyRials=function(num){'use strict';return wordifyfa(num,0)+" ریال";};var wordifyRialsInTomans=function(num){'use strict';if(num>=10){num=parseInt(num/10,10);}else if(num<=-10){num=parseInt(num/10,10);}else{num=0;}
+return wordifyfa(num,0)+" تومان";};if(typeof module!=='undefined'&&module.exports){module.exports.wordifyfa=wordifyfa;}
+function persian_to_English_Numbers(a){if(typeof a==="undefined"){return}
+a=a.toString();a=a.replace(/۰/g,"0");a=a.replace(/۱/g,"1");a=a.replace(/۲/g,"2");a=a.replace(/۳/g,"3");a=a.replace(/۴/g,"4");a=a.replace(/۵/g,"5");a=a.replace(/۶/g,"6");a=a.replace(/۷/g,"7");a=a.replace(/۸/g,"8");a=a.replace(/۹/g,"9");return a}
+function Comma(Num){Num+='';Num=Num.replace(',','');Num=Num.replace(',','');Num=Num.replace(',','');Num=Num.replace(',','');Num=Num.replace(',','');Num=Num.replace(',','');x=Num.split('.');x1=x[0];x2=x.length>1?'.'+x[1]:'';var rgx=/(\d+)(\d{3})/;while(rgx.test(x1))
+x1=x1.replace(rgx,'$1'+','+'$2');return x1+x2;}
+function number_to_letter(input_id){if(input_id==null){var get_number=document.getElementById("amount_field");}else{var get_number=document.getElementById(input_id);}
+var numbers=persian_to_English_Numbers(get_number.value);var numbers=numbers.replace(/[^0-9.]/g,'');var en_num=numbers.replace(",","");var element=document.getElementById('letter_result');if(element!=null){document.getElementById("letter_result").innerHTML=wordifyfa(Number(en_num));}
+get_number.value=en_num;}

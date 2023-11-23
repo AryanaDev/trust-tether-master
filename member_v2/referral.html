@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="dynamicTitle">دعوت دوستان</title>
+    <link rel="stylesheet" href="../panel_v2/css/datatables.css" />
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/swiper-bundle.min.css?v=0.02" />
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/alert.css?v=0.01" />
+    <link rel="stylesheet" href="../panel_v2/css/icon.css" />
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/font.css" />
+    <link rel="stylesheet" href="../panel_v2/css/grid340e.css" />
+    <link rel="stylesheet" href="../panel_v2/css/style.css" />
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/light.css?v=0.29" />
+    <link rel="manifest" href="https://kifpool.me/panel_v2/js/manifest.json?v=0.1.9" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capab le" content="yes" />
+    <link rel="apple-touch-icon" href="https://kifpool.me/panel_v2/images/pwa/icon-512x512.png" />
+    <link rel="icon" href="https://kifpool.me/ui_v2/images/apple-icon.png" />
+    <script type="a0bd7ec788d709648b3b08e8-text/javascript">
+
+      window.$crisp=[];window.CRISP_WEBSITE_ID="49650e8f-7d25-47e0-8170-ee9fe4ada9c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+      $crisp.push(["set", "user:name", ["مهدی رنجبر"]]);
+      $crisp.push(["set", "user:phone", ["09355579327"]]);
+      $crisp.push(["set", "user:email", [""]]);
+      $crisp.push(["set", "user:avatar", ["https://kifpool.me/panel-assets/img/ava-header.png"]]);
+      $crisp.push(['do', 'chat:hide']);
+      $crisp.push(['on', 'chat:closed', function() {
+          $crisp.push(['do', 'chat:hide']);
+      }]);
+    </script>
+</head>
+
+<body>
+    <div class="dashboard d-flex">
+        <div class="sidebar">
+            <div class="sidebar-hd d-flex align-start just-center">
+                <div class="logo">
+                    <img class="logo-larg dark-logo" src="../panel_v2/images/logo.jpg" alt />
+                </div>
+                <div class="closemenu"><i class="icon-arrow-right"></i></div>
+            </div>
+            <div class="menu scrollhide">
+                <ul>
+                    <li >
+                        <a href="index.html"><i class="icon-category4"></i><span>داشبورد </span></a>
+                    </li>
+                    <li>
+                        <a href="wallet.html"><i class="icon-strongbox-24"></i><span>کیف پول من</span></a>
+                    </li>
+
+                    <li>
+                        <a href="price.html"><i class="icon-candle4"></i><span>قیمت ارزهای دیجیتال</span></a>
+                    </li>
+                    <li>
+                        <a href="exchange.html"><i class="icon-money-send"></i><span>خرید و فروش سریع</span></a>
+                    </li>
+                    <li>
+                        <a href="pro-exchange.html"><i class="icon-svg"><img
+                                    src="https://kifpool.me/panel_v2/images/trad.svg" /></i><span>بازار حرفه ای
+                            </span></a>
+                    </li>
+                    <li>
+                        <a href="activities/activities.html"><i class="icon-calendar-search"></i><span>تاریخچه</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="referral.html"><i class="icon-money-add4"></i><span>دعوت دوستان</span></a>
+                    </li>
+                    <li>
+                        <a href="profile.html"><i class="icon-setting-34"></i><span>مدیریت حساب کاربری</span></a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- <li><a href="https://kifpool.me/member_v2/verify"><i class="icon-security-user"></i><span>احراز
+                                هویت</span></a></li> -->
+                    <li>
+                        <a href="login.html" class="red"><i class="icon-logout"></i><span>خروج از حساب کاربری</span></a>
+                    </li>
+                </ul>
+                <!-- <div class="menu-title">پشتیبانی تلفنی</div>
+                <ul>
+                    <li><a href="tel:02191306781"><i class="icon-call"></i><span class="tel">021-91306781</span></a>
+                    </li>
+                    <li><a href="javascript:;"><span>پاسخگوی تلفنی ۹ صبح الی ۹ شب</span></a></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center">
+                <div class="navbar d-flex align-center">
+                    <div class="menu-toggle">
+                        <i class="icon-category4"></i> <span>منو</span>
+                    </div>
+                    <div class="userinfo sub">
+                        <div class="d-flex align-center">
+                            <div class="img">
+                                <img src="https://kifpool.me/panel-assets/img/ava-header.png" alt />
+                            </div>
+                            <div class="info">
+                                <div class="name">مهدی رنجبر</div>
+                                <div class="userid">09355579327</div>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li>
+                                    <a href="https://kifpool.me/member_v2/profile"><i class="icon-personalcard"></i>
+                                        پروفایل کاربری</a>
+                                </li>
+                                <li>
+                                    <a href="https://kifpool.me/member_v2/earn-money"><i class="icon-money-add4"></i>
+                                        کسب درآمد</a>
+                                </li>
+                                <li>
+                                    <a href="https://kifpool.me/member_v2/verify/cards"><i class="icon-cards"></i>
+                                        افزودن حساب بانکی</a>
+                                </li>
+                                <li>
+                                    <a href="https://kifpool.me/member_v2/logout" class="red"><i
+                                            class="icon-logout"></i> خروج از حساب</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-actions">
+                        <div class="item sub-toggle">
+                            <i class="icon-notification-bing">
+                                <div class="notifi-new"></div>
+                            </i><span>اطلاعیه ها</span>
+                            <div class="sub-box tab-container">
+                                <div class="checked-list scrollhide d-flex">
+                                    <div class="checked-item tab-item active" data-tab-box="allNotif">
+                                        اعلانات شما
+                                    </div>
+                                    <div class="checked-item tab-item" data-tab-box="arzNotif">
+                                        اعلانات سیستمی
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="allNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="notifId10071531">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">3 ساعت پیش</div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۹ آبان ۱۴۰۲ ساعت
+                                                ۱۴:۱۸ با دستگاه desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10060290">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">20 ساعت پیش</div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۸ آبان ۱۴۰۲ ساعت
+                                                ۲۱:۲۷ با دستگاه desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10051019">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">1 روز پیش</div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۸ آبان ۱۴۰۲ ساعت
+                                                ۱۳:۱۶ با دستگاه desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10005471">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">4 روز پیش</div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۵ آبان ۱۴۰۲ ساعت
+                                                ۱۷:۱۲ با دستگاه desktop
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="arzNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="system_notifId185">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">1 روز پیش</div>
+                                                    <h3>
+                                                        مارکت و انتقال ارز MELI بطور موقت با اختلال مواجه
+                                                        شده است.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                بدلیل نوسان ارز MELI و جلوگیری از | از بین رفتن دارایی
+                                                کاربران | خرید و فروش و انتقال این ارز توسط مارکت مبدا
+                                                بطور موفت از دسترس خارج شده است. بلافاصله پس از فعال
+                                                شدن ارز از سمت مبدا | این ارز داخل صرافی کیف پول من
+                                                فعال خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId184">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">3 هفته پیش</div>
+                                                    <h3>
+                                                        ارز MONS از لیست ارز های قابل خرید و فروش صرافی
+                                                        کیف پول من حذف شده است.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف
+                                                پول من حذف شده است. طبق اعلام تیم توسعه دهنده ارز MONS
+                                                | این ارز درحال تبدیل بروزرسانی بوده و شبکه مبدا , از
+                                                نسخه جدید این ارز پشتیبانی نخواهد کرد. دارایی MONS
+                                                کاربران بطور خودکار فروخته شده و معادل دلاری این ارز
+                                                بصورت تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId183">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">3 هفته پیش</div>
+                                                    <h3>
+                                                        ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی
+                                                        کیف پول من حذف شده است.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف
+                                                پول من حذف شده است. طبق اعلام تیم توسعه دهنده ارز
+                                                SHARBI | این ارز درحال تبدیل بروزرسانی بوده و شبکه
+                                                مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی SHARBI کاربران بطور خودکار فروخته شده و معادل
+                                                دلاری این ارز بصورت تتر برای هولدر های این ارز واریز
+                                                شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId182">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">3 هفته پیش</div>
+                                                    <h3>
+                                                        تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار
+                                                        انجام خواهد شد.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام
+                                                خواهد شد. طی پروسه تغییر نام | واریز و برداشت و ترید
+                                                ارز MEME بسته خواهد شد و پس از تغییر نام | ارز MEMEBRC
+                                                در سایت لیست خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId181">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon">
+                                                    <i class="icon-notification-bing"></i>
+                                                </div>
+                                                <div class="info">
+                                                    <div class="date">3 هفته پیش</div>
+                                                    <h3>
+                                                        ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف
+                                                        پول من حذف شده است.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول
+                                                من حذف شده است. طبق اطلاع رسانی شبکه مبدا | امکان
+                                                پشتیبانی از ارز GOB پس از انجام بروزرسانی وجود ندارد.
+                                                مکان برداشت این ارز برای کابران فراهم شده و کاربران
+                                                باید دارایی خود را به کیف پول های شخصی انتقال دهند.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-center just-between pd-t-10">
+                                    <button class="btn btn-black showall" style="margin-right: auto; margin-left: 10px">
+                                        خواندن همه
+                                    </button>
+                                    <a href="https://kifpool.me/member_v2/notifications" class="btn btn-blue">همه اعلان
+                                        ها</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item sub-toggle">
+                            <i class="icon-message-24"></i><span>پشتیبانی</span>
+                            <div class="sub-box">
+                                <div onclick="if (!window.__cfRLUnblockHandlers) return false; $crisp.push(['do', 'chat:show']),$crisp.push(['do', 'chat:open'])"
+                                    style="cursor: pointer" class="support-item d-flex align-center"
+                                    data-cf-modified-a0bd7ec788d709648b3b08e8->
+                                    <div class="icon"><i class="icon-message-notif4"></i></div>
+                                    <div class="info">پشتیبانی آنلاین</div>
+                                    <div class="chat-online"></div>
+                                </div>
+                                <a href="tel:02191306781" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-call"></i></div>
+                                    <div class="info" dir="ltr">02191306781</div>
+                                </a>
+                                <a href="https://kifpool.me/member_v2/tickets/create"
+                                    class="support-item d-flex align-center">
+                                    <div class="icon">
+                                        <i class="icon-message-question4"></i>
+                                    </div>
+                                    <div class="info">ارسال تیکت پشتیبانی</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item dark-toggle"><i class="icon-sun-1"></i></div>
+                    </div>
+                </div>
+                <div class="statusbar">
+                    <div class="todaydate d-flex align-center">
+                        <div class="online-state"></div>
+                        <div id="pdate"></div>
+                    </div>
+                    <div class="menu-btns">
+                        <a href="rial-action.html" class="btn btn-green">واریز تومانی</a>
+                        <a href="rial-action.html?type=withdraw" class="btn btn-gray">برداشت تومانی</a>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="content-title">
+                        <h2>دعوت دوستان</h2>
+                        <div class="speedbar">
+                            <a href>حساب کاربری</a> / <span>دعوت دوستان</span>
+                        </div>
+                    </div>
+
+                    <div class="section fix-mr15">
+                        <div class="block pd-20 bg-gradianet-animation">
+                            <div class="block-title pd-d-10 mb-10">
+                                <h3>آمار دعوت دوستان شما</h3>
+                            </div>
+                            <div class="d-flex-wrap just-between boxs-statistics">
+                                <div class="box-statistics">
+                                    <p>
+                                        مجموع پاداش دریافتی
+                                    </p>
+                                    <div class="d-flex-wrap just-end align-end">
+                                        <svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35 4.664a9.333 9.333 0 0 1 8.083 14.002l10.584-.002v4.667H49v23.333a2.333 2.333 0 0 1-2.333 2.333H9.333A2.333 2.333 0 0 1 7 46.664V23.331H2.333v-4.667l10.584.002A9.333 9.333 0 0 1 28 7.826a9.293 9.293 0 0 1 7-3.162Zm-9.333 18.667h-14v21h14v-21Zm18.666 0h-14v21h14v-21ZM21 9.33a4.666 4.666 0 0 0-.35 9.321l.35.012h4.667v-4.667a4.666 4.666 0 0 0-3.96-4.613l-.36-.042L21 9.331Zm14 0a4.666 4.666 0 0 0-4.655 4.316l-.011.35v4.667H35a4.667 4.667 0 0 0 4.655-4.317l.012-.35A4.666 4.666 0 0 0 35 9.331Z"
+                                                fill="#009b8759"></path>
+                                        </svg>
+                                        <span>
+                                            0 <span>تومان</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="box-statistics">
+                                    <p>
+                                        معامله دوستان
+                                    </p>
+                                    <div class="d-flex-wrap just-end align-end">
+                                        <svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M32.667 33.257v4.877A14.001 14.001 0 0 0 14 51.336l-4.666-.002a18.666 18.666 0 0 1 23.333-18.08v.003ZM28 30.336c-7.735 0-14-6.265-14-14s6.265-14 14-14 14 6.265 14 14-6.265 14-14 14Zm0-4.667a9.33 9.33 0 0 0 9.334-9.333A9.33 9.33 0 0 0 28 7.003a9.33 9.33 0 0 0-9.333 9.333A9.33 9.33 0 0 0 28 25.669Zm14 14v-7h4.667v7h7v4.667h-7v7H42v-7h-7v-4.667h7Z"
+                                                fill="#009b8759"></path>
+                                        </svg>
+                                        <span>
+                                            0 <span>تراکنش</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="box-statistics">
+                                    <p>
+                                        دوستان دعوت شده
+                                    </p>
+                                    <div class="d-flex-wrap just-end align-end">
+                                        <svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M28 25.664a11.666 11.666 0 0 1 11.666 11.667v14H35v-14a7 7 0 0 0-6.59-6.989l-.41-.011a7 7 0 0 0-6.988 6.59l-.012.41v14h-4.667v-14A11.666 11.666 0 0 1 28 25.664Zm-15.167 7c.651 0 1.284.077 1.89.22a13.877 13.877 0 0 0-.702 3.674l-.021.773v.2a3.48 3.48 0 0 0-.83-.186l-.337-.014a3.5 3.5 0 0 0-3.483 3.164l-.017.336v10.5H4.666v-10.5a8.167 8.167 0 0 1 8.167-8.167Zm30.334 0a8.167 8.167 0 0 1 8.166 8.167v10.5h-4.666v-10.5a3.5 3.5 0 0 0-3.165-3.484l-.336-.016c-.408 0-.8.07-1.166.198v-.198c0-1.554-.252-3.048-.721-4.443a7.98 7.98 0 0 1 1.887-.224Zm-30.334-14a5.833 5.833 0 1 1 0 11.667 5.833 5.833 0 0 1 0-11.667Zm30.334 0a5.833 5.833 0 1 1 0 11.667 5.833 5.833 0 0 1 0-11.667Zm-30.334 4.667a1.167 1.167 0 1 0 0 2.333 1.167 1.167 0 0 0 0-2.333Zm30.334 0a1.167 1.167 0 1 0 0 2.333 1.167 1.167 0 0 0 0-2.333ZM28 4.664a9.333 9.333 0 1 1 0 18.667 9.333 9.333 0 0 1 0-18.667Zm0 4.667a4.667 4.667 0 1 0 0 9.333 4.667 4.667 0 0 0 0-9.333Z"
+                                                fill="#009b8759"></path>
+                                        </svg>
+                                        <span>
+                                            0 <span>نفر</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="box-statistics">
+                                    <p>
+                                        دوستان تأیید هویت شده
+                                    </p>
+                                    <div class="d-flex-wrap just-end align-end">
+                                        <svg width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M32.667 33.257v4.877A14.001 14.001 0 0 0 14 51.336l-4.667-.002a18.667 18.667 0 0 1 23.334-18.08v.003ZM28 30.336c-7.735 0-14-6.265-14-14s6.265-14 14-14 14 6.265 14 14-6.265 14-14 14Zm0-4.667a9.33 9.33 0 0 0 9.333-9.333A9.33 9.33 0 0 0 28 7.003a9.33 9.33 0 0 0-9.333 9.333A9.33 9.33 0 0 0 28 25.669Zm13.517 20.8 8.248-8.249 3.302 3.3-11.55 11.55-8.25-8.251 3.3-3.3 4.948 4.95h.002Z"
+                                                fill="#009b8759"></path>
+                                        </svg>
+                                        <span>
+                                            0 <span>نفر</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="box-statistics">
+                                    <p>
+                                        هدیه دوستان دعوت شده
+                                    </p>
+                                    <div class="d-flex-wrap just-between align-end">
+                                        <span> کارمزد <strong>تراکنش اول</strong></span>
+                                        <strong>رایگان</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section d-flex-wrap fix-mr15">
+                        <div class="block pd-20 grow-2 basis400 d-flex-column bg-gradianet-animation align-center">
+                            <div class="block-title pd-d-10 mb-10">
+                                <h3>کسب درآمد میلیونی با دعوت دوستان به تراست تتر</h3>
+                                <span>
+                                    کد دعوت و یا لینک زیر را برای دوستان خود ارسال کنید و با تایید هویت تعداد هرچه بیشتر
+                                    دوستانتان، مادام‌العمر تا 55درصد پاداش دریافت نمایید
+                                </span>
+                            </div>
+                            <div class="full-width">
+                                <div class="exchnage-info ">
+                                    <div class="item d-flex-wrap just-between align-center">
+                                        <div class="">کد دعوت</div>
+                                        <div class="copy-referral green" style="font-size: 1.2em" id="referralCode">
+                                            DVIU696t</div>
+                                        <div class="d-flex" id="copyButton" onclick="
+                                            var referralCodeElement = document.getElementById('referralCode');
+                                            var range = document.createRange();
+                                            range.selectNode(referralCodeElement);
+                                            window.getSelection().removeAllRanges();
+                                            window.getSelection().addRange(range);
+                                            document.execCommand('copy');
+                                            window.getSelection().removeAllRanges();
+                                            alert('کد دعوت کپی شد: ' + referralCodeElement.textContent);
+                                        ">
+                                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7Zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3ZM4.003 9 4 20h11V9H4.003Z"
+                                                    fill="#242424"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-width">
+                                <div class="exchnage-info ">
+                                    <div class="item d-flex-wrap just-between align-center">
+                                        <div class="">لینک دعوت</div>
+                                        <div class="copy-referral green" style="font-size: 1.2em" id="referralCode2">
+                                            trusttether.com/register?ref=LOJFFD</div>
+                                        <div class="d-flex" onclick="
+                                            var referralCodeElement = document.getElementById('referralCode2');
+                                            var range = document.createRange();
+                                            range.selectNode(referralCodeElement);
+                                            window.getSelection().removeAllRanges();
+                                            window.getSelection().addRange(range);
+                                            document.execCommand('copy');
+                                            window.getSelection().removeAllRanges();
+                                            alert('لینک دعوت کپی شد: ' + referralCodeElement.textContent);
+                                        ">
+                                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7Zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3ZM4.003 9 4 20h11V9H4.003Z"
+                                                    fill="#242424"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="block pd-20 grow-2 basis400 d-flex-column bg-gradianet-animation align-center">
+                            <div class="block-title pd-d-10 basis0 full-width">
+                                <h3>تراکنش دوستان</h3>
+                            </div>
+                            <div class="block pd-d-20 full-width">
+                                <table class="display nowrap dataTable dtr-inline collapsed">
+                                    <thead class="referral-transaction">
+                                        <tr>
+                                            <th class="text-center">تاریخ</th>
+                                            <th class="text-center">تعداد (تراکنش)</th>
+                                            <th class="text-center">پاداش (تومان)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section d-flex-wrap fix-mr15">
+                        <div class="block pd-20 grow-2 basis400 d-flex-column bg-gradianet-animation align-center">
+                            <div class="block-title pd-d-10 basis0 full-width">
+                                <h3>تراکنش دوستان</h3>
+                            </div>
+                            <div class="block pd-d-20 full-width">
+                                <table class="display nowrap dataTable dtr-inline collapsed">
+                                    <thead class="referral-transaction">
+                                        <tr>
+                                            <th class="text-center">تاریخ</th>
+                                            <th class="text-center">تعداد (تراکنش)</th>
+                                            <th class="text-center">پاداش (تومان)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="block pd-20 grow-2 basis400 d-flex-column bg-gradianet-animation align-center">
+                            <div class="block-title pd-d-10 basis0 full-width">
+                                <h3>میزان پاداش دریافتی</h3>
+                            </div>
+                            <div class="block pd-d-20 full-width">
+                               <div class="d-flex just-between pd-10">
+                                    <table class="display nowrap dataTable referral-received dtr-inline collapsed">
+                                        <thead >
+                                            <tr>
+                                                <th class="text-center">دوستان تایید هویت شده</th>
+                                                <th class="text-center"> پاداش</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>از ۱ تا ۳ نفر
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>٪20
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kifpool.me/panel_v2/js/jquery-3.6.0.min.js"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/datatables.min.js?v=0.04"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/swiper-bundle.min.js"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/slider-option.js?v=0.05"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/pdate.min.js?v=0.1"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/cute-alert.js?=0.6.4"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/jquery.validate.min.js?=0.2"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/bank.js?v=0.07.8"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/app.js?v=0.054.111"
+        type="a0bd7ec788d709648b3b08e8-text/javascript"></script>
+
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="a0bd7ec788d709648b3b08e8-|49" defer></script>
+</body>
+
+</html>

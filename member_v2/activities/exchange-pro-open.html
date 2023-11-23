@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle"> داشبورد </title>
+    <link rel="stylesheet" href="../../panel_v2/css/datatables.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/swiper-bundle.min.css?v=0.02">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/alert.css?v=0.01">
+    <link rel="stylesheet" href="../../panel_v2/css/icon.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/font.css">
+    <link rel="stylesheet" href="../../panel_v2/css/grid340e.css">
+    <link rel="stylesheet" href="../../panel_v2/css/style.css">
+        <link rel="stylesheet" href="../panel_v2/css/light.css">
+    <link rel="manifest" href="https://kifpool.me/panel_v2/js/manifest.json?v=0.1.9">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capab le" content="yes">
+    <link rel="apple-touch-icon" href="https://kifpool.me/panel_v2/images/pwa/icon-512x512.png">
+    <link rel="icon" href="https://kifpool.me/ui_v2/images/apple-icon.png">
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+    window.$crisp=[];window.CRISP_WEBSITE_ID="49650e8f-7d25-47e0-8170-ee9fe4ada9c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    $crisp.push(["set", "user:name", ["مهدی رنجبر"]]);
+    $crisp.push(["set", "user:phone", ["09355579327"]]);
+    $crisp.push(["set", "user:email", [""]]);
+    $crisp.push(["set", "user:avatar", ["https://kifpool.me/panel-assets/img/ava-header.png"]]);
+    $crisp.push(['do', 'chat:hide']);
+    $crisp.push(['on', 'chat:closed', function() {
+        $crisp.push(['do', 'chat:hide']);
+    }]);
+
+</script>
+</head>
+
+<body>
+    <div id="refresh-container">
+        <div id="refresh-icon"></div>
+        <div id="refresh-text">بکشید تا صفحه را رفرش کنید</div>
+    </div>
+
+
+    <div class="dashboard d-flex">
+
+        <div class="sidebar">
+            <div class="sidebar-hd d-flex align-start just-center">
+                <div class="logo">
+                   <img class="logo-larg light-logo" src="../panel_v2/images/logo.jpg" alt>
+                </div>
+                <div class="closemenu"><i class="icon-arrow-right"></i></div>
+            </div>
+            <div class="menu scrollhide">
+              
+                <ul>
+                    <li class="active"><a href="index.html"><i class="icon-category4"></i><span>داشبورد </span></a></li>
+                    <li><a href="wallet.html"><i class="icon-strongbox-24"></i><span>کیف پول
+                                من</span></a></li>
+
+                    <li><a href="price.html"><i class="icon-candle4"></i><span>قیمت
+                                ارزهای دیجیتال</span></a></li>
+                    <li><a href="exchange.html"><i class="icon-money-send"></i><span>خرید و
+                                فروش سریع</span></a></li>
+                    <li><a href="pro-exchange.html"><i class="icon-svg"><img
+                                    src="https://kifpool.me/panel_v2/images/trad.svg"></i><span>بازار حرفه ای
+                            </span></a></li>
+                                        <li><a href="activities/activities.html"><i class="icon-calendar-search"></i><span>تاریخچه</span></a></li>
+                    <li><a href="referral.html"><i class="icon-money-add4"></i><span>دعوت
+                                دوستان</span></a></li>
+                   <li><a href="profile.html"><i class="icon-setting-34"></i><span>مدیریت
+                                حساب کاربری</span></a></li>
+                </ul>
+                <ul>
+                    <!-- <li><a href="https://kifpool.me/member_v2/verify"><i class="icon-security-user"></i><span>احراز
+                                هویت</span></a></li> -->
+                    <li><a href="login.html" class="red"><i class="icon-logout"></i><span>خروج
+                                از حساب کاربری</span></a></li>
+                </ul>
+                <!-- <div class="menu-title">پشتیبانی تلفنی</div>
+                <ul>
+                    <li><a href="tel:02191306781"><i class="icon-call"></i><span class="tel">021-91306781</span></a>
+                    </li>
+                    <li><a href="javascript:;"><span>پاسخگوی تلفنی ۹ صبح الی ۹ شب</span></a></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center">
+                <div class="navbar d-flex align-center">
+                    <div class="menu-toggle menu-hide-res"><i class="icon-category4"></i> <span>منو</span></div>
+                    <div class="userinfo sub">
+                        <div class="d-flex align-center">
+                            <div class="img"><img src="https://kifpool.me/panel-assets/img/ava-header.png" alt></div>
+                            <div class="info">
+                                <div class="name">مهدی رنجبر</div>
+                                <div class="userid">09355579327</div>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="https://kifpool.me/member_v2/profile"><i class="icon-personalcard"></i>
+                                        پروفایل کاربری</a></li>
+                                <li><a href="https://kifpool.me/member_v2/earn-money"><i class="icon-money-add4"></i>
+                                        کسب درآمد</a></li>
+                                <li><a href="https://kifpool.me/member_v2/verify/cards"><i class="icon-cards"></i>
+                                        افزودن حساب بانکی</a></li>
+                                <li><a href="https://kifpool.me/member_v2/logout" class="red"><i
+                                            class="icon-logout"></i> خروج از حساب</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-actions">
+                        <div class="item sub-toggle"><i class="icon-notification-bing">
+                                <div class="notifi-new"></div>
+                            </i><span>اطلاعیه ها</span>
+                            <div class="sub-box tab-container">
+
+                                <div class="checked-list scrollhide d-flex">
+                                    <div class="checked-item tab-item active" data-tab-box="allNotif">اعلانات شما</div>
+                                    <div class="checked-item tab-item" data-tab-box="arzNotif">اعلانات سیستمی</div>
+                                </div>
+                                <div class="tab-content" id="allNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="notifId10005471">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        1 ساعت پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۵ آبان ۱۴۰۲ ساعت ۱۷:۱۲ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="arzNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="system_notifId184">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اعلام تیم توسعه دهنده ارز MONS | این ارز درحال تبدیل بروزرسانی بوده
+                                                و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی MONS کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId183">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده
+                                                است.
+                                                طبق اعلام تیم توسعه دهنده ارز SHARBI | این ارز درحال تبدیل بروزرسانی
+                                                بوده و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی SHARBI کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId182">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                طی پروسه تغییر نام | واریز و برداشت و ترید ارز MEME بسته خواهد شد و پس
+                                                از تغییر نام | ارز MEMEBRC در سایت لیست خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId181">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | امکان پشتیبانی از ارز GOB پس از انجام
+                                                بروزرسانی وجود ندارد.
+                                                مکان برداشت این ارز برای کابران فراهم شده و کاربران باید دارایی خود را
+                                                به کیف پول های شخصی انتقال دهند.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId180">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>واریز و برداشت ارز BSV بطور موقت مسدود شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                واریز و برداشت ارز BSV بطور موقت مسدود شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | بدلیل بروزرسانی شبکه ارز | امکان واریز و
+                                                برداشت این ارز وجود ندارد.
+                                                بلافاصله پس از انجام بروزرسانی | واریز و برداشت ارز در صرافی کیف پول من
+                                                فعال خواهد شد.
+                                                امکان خرید و فروش این ارز در صرافی کیف پول من | همچنان فعال خواهد بود.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-center just-between pd-t-10">
+                                    <button class="btn btn-gray showall"
+                                        style="margin-right: auto; margin-left: 10px;     font: 13px/30px YekanBakh, ficon, Tahoma, Arial, sans-serif;">خواندن
+                                        همه</button>
+                                    <a href="https://kifpool.me/member_v2/notifications" class="btn btn-green">همه اعلان
+                                        ها</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item sub-toggle"><i class="icon-message-24"></i><span>پشتیبانی</span>
+                            <div class="sub-box">
+                                <div onclick="if (!window.__cfRLUnblockHandlers) return false; $crisp.push(['do', 'chat:show']),$crisp.push(['do', 'chat:open'])"
+                                    style="cursor: pointer" class="support-item d-flex align-center"
+                                    data-cf-modified-c9fb617fa22b98c03379f693->
+                                    <div class="icon"><i class="icon-message-notif4"></i></div>
+                                    <div class="info">پشتیبانی آنلاین</div>
+                                    <div class="chat-online"></div>
+                                </div>
+                                <a href="tel:02191306781" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-call"></i></div>
+                                    <div class="info" dir="ltr">02191306781</div>
+                                </a>
+                                <a href="https://kifpool.me/member_v2/tickets/create"
+                                    class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-message-question4"></i></div>
+                                    <div class="info">ارسال تیکت پشتیبانی</div>
+                                </a>
+                            </div>
+                        </div>
+                     <div class="item dark-toggle "><i class="icon-sun-1"></i></div>
+                    </div>
+                </div>
+                <div class="statusbar">
+                    <div class="todaydate d-flex align-center">
+                        <div class="online-state"></div>
+                        <div id="pdate"></div>
+                    </div>
+                    <div class="menu-btns">
+                        <a href="rial-action.html" class="btn btn-green">واریز تومانی</a>
+                        <a href="https://kifpool.me/member_v2/rial-action?type=withdraw" class="btn btn-gray">برداشت
+                            تومانی</a>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+
+                    <div class="content-title">
+                        <h2>معاملات حرفه ای درحال تکمیل</h2>
+                        <div class="speedbar"><a href="">حساب کاربری</a> / <span>معاملات حرفه ای درحال تکمیل</span>
+                        </div>
+                    </div>
+
+                    <div class="section fix-mr15">
+                        <div class="block pd-td-20">
+                            <div class="table-header">
+                                <div class="btns-table d-grid">
+                                    <div class="tab-item btn   ">
+                                        <a href="activities.html">
+                                            معاملات تکمیل شده
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn ">
+                                        <a href="toman-deposit.html">
+                                            واریز های ریالی
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn ">
+                                        <a href="deposit.html">
+                                            واریز های ارزی
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn ">
+                                        <a href="toman-withdraw.html">
+                                            برداشت های ریالی
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn ">
+                                        <a href="withdraw.html">
+                                            برداشت های ارزی
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn ">
+                                        <a href="exchange-pro.html">
+                                            معاملات حرفه ای
+                                        </a>
+                                    </div>
+                                    <div class="tab-item btn active">
+                                        <a href="exchange-pro-open.html">
+                                            معاملات حرفه ای باز
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabOne">
+                                <div id="orderTable_wrapper" class="dataTables_wrapper no-footer">
+                                    <div>
+                                        <div class="dataTables_scroll">
+                                            <div class="dataTables_scrollHead"
+                                                style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                                                <div class="dataTables_scrollHeadInner"
+                                                    style="box-sizing: content-box; width: 1265.28px; padding-left: 0px; min-width: 1265.28px;">
+                                                    <table
+                                                        class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                        style="margin-left: 0px; width: 1265.28px;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 105.547px;"
+                                                                    aria-label="جفت ارز: مرتب سازی ستون عمودی">جفت ارز
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 67.6562px;"
+                                                                    aria-label="نوع: مرتب سازی ستون عمودی">نوع</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 157.375px;"
+                                                                    aria-label="حالت سفارش: مرتب سازی ستون عمودی">حالت
+                                                                    سفارش</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 120.484px;"
+                                                                    aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">تاریخ
+                                                                    ثبت</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 165.359px;"
+                                                                    aria-label="تعداد سفارش: مرتب سازی ستون عمودی">تعداد
+                                                                    سفارش</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 190.281px;"
+                                                                    aria-label="تعداد انجام شده: مرتب سازی ستون عمودی">
+                                                                    تعداد انجام شده</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 108.531px;"
+                                                                    aria-label="وضعیت: مرتب سازی ستون عمودی">وضعیت</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                                    style="width: 33.0469px;" aria-label="جزئیات">جزئیات
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="dataTables_scrollBody"
+                                                style="position: relative; overflow: auto; width: 100%;">
+                                                <table id="orderTable"
+                                                    class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                    style="width: 1269px;">
+                                                    <thead>
+                                                        <tr style="height: 0px;">
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 105.547px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="جفت ارز: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">جفت ارز</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 67.6562px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="نوع: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">نوع</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 157.375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="حالت سفارش: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">حالت سفارش
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 120.484px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تاریخ ثبت
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 165.359px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تعداد سفارش: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تعداد سفارش
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 190.281px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تعداد انجام شده: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تعداد انجام
+                                                                    شده</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 108.531px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="وضعیت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">وضعیت</div>
+                                                            </th>
+                                                            <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                                style="width: 33.0469px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="جزئیات">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">جزئیات</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr class="odd">
+                                                            <td valign="top" colspan="9" class="dataTables_empty"
+                                                                style="position: relative; right: unset;">داده ای برای
+                                                                نمایش وجود ندارد</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="table-ft"></div>
+                                    </div>
+                                </div>
+                                <div class="pages">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="modalbox scrollhide timermodal">
+                    <div class="modal">
+                        <div class="modal-hd d-flex align-center just-between">
+                            <div class="title red">اطلاعیه مهم</div>
+                            <div class="time">23 اردیبهشت 1402 ساعت 14:32</div>
+                        </div>
+                        <div class="modal-main scrollhide">
+                            <div class="modal-text">
+                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h3>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
+                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                                    طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-ft d-flex just-end">
+                            <button class="btn md-close" type="button" disabled>موافقم</button>
+                            <button class="btn md-close red" type="button" disabled>بستن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <a href="pro-exchange.html">
+                        <img src="../panel_v2/images/trad.svg" alt="">
+                        <span>
+                            بازار
+                        </span></a>
+                    <a href="exchange.html">
+                        <i class="icon-money-send"></i>
+                        <span>
+                            خرید سریع
+                        </span></a>
+                    <a href="index.html">
+                        <i class="icon-candle4"></i>
+                        <span>داشبورد،</span></a>
+                    <a onclick="openModal('Item 4')">
+                        <i class="icon-strongbox-24"></i>
+                        <span>کیف پول</span>
+                    </a>
+                    <div class="menu-toggle menu-show-res"><i class="icon-category4"></i> <span>منو</span></div>
+                </div>
+                <!-- Modals -->
+                <div class="modal" id="modalItem">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <div id="modalContent"></div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    <p> تجربه خرید امن با ضمانت قیمت در تراست تتر</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../panel_v2/js/jquery-3.6.0.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/datatables.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/swiper-bundle.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/slider-option.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/pdate.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/cute-alert.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/apexcharts.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/tv.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../../panel_v2/js/app307f.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+    // pwa app
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/pwa-sw.js?v=0.3.1').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
+    <script>
+        function openModal(item) {
+            document.getElementById('modalContent').innerHTML = `<h2>${item} Modal</h2><p>Modal content goes here.</p>`;
+            document.querySelector('.modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.querySelector('.modal').style.display = 'none';
+        }
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('modal')) {
+                closeModal();
+            }
+        });
+    </script>
+    <script src="../panel_v2/js/pwa-settings.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+        AMIB.showPDate("pdate")
+</script>
+    <script>
+
+
+
+
+        $('.select-coin-item').click(function () {
+
+            var data = $(this).data('click');
+
+            $('#buy-price-chart').html(data.buy);
+            $('#sell-price-chart').html(data.sell);
+            $('#change-price-chart').html(data.change + '%');
+            $('#dollar-price-chart').html(data.dollar);
+
+            $('.index-chart').prop('href', data.chart);
+            $('.index-exchange').prop('href', data.exchange);
+
+            $('.select-coin-list').css('display', 'none');
+
+        });
+
+        $('#orderTable').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            columnDefs: [
+                { orderable: false, targets: 7, width: 1, },
+            ],
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#digitalPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#rialPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        function CancellPayment(ID) {
+
+            $('.btn-cancel-toman').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: 'https://kifpool.me/member_v2/payment/cancel_payment',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-toman').html('منتظر لغو');
+                    $('.btn-cancel-toman').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-toman').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+
+        function CancellPaymentCoin(ID) {
+
+            $('.btn-cancel-coin').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: 'https://kifpool.me/member_v2/payment/cancel_payment_coin',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-coin').html('منتظر لغو');
+                    $('.btn-cancel-coin').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-coin').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+
+    </script>
+    <script>
+        var a = $('#walletChart').data('btc-balance');
+        var b = $('#walletChart').data('toman-balance');
+        var d = 0;
+        var walletChart = {
+            series: [a, b, d],
+            labels: [' موجودی ارزی', ' موجودی تومانی', 'موجودی لیر'],
+            chart: {
+                type: 'donut',
+                width: '100%'
+            },
+            // responsive: [{
+            //     breakpoint: 480,
+            //     options: {
+            //         chart: {
+            //             width: '120px'
+            //         }
+            //     }
+            // }],
+            legend: {
+                show: false,
+            },
+            plotOptions: {
+                pie: {
+                    startAngle: 0,
+                    donut: {
+                        size: '70%',
+                        dataLabels: {
+                            enabled: false
+                        },
+                    }
+                },
+            },
+
+            dataLabels: {
+                enabled: false
+            },
+
+            fill: {
+                width: 20,
+                type: 'solid',
+                lineCap: 'round',
+                colors: ['#FFC045', '#28c666', '#43c1ff']
+            },
+            stroke: {
+                show: true,
+                lineCap: 'round',
+                width: 0,
+                colors: ['#0C111A00']
+            },
+            grid: {
+                padding: {
+                    left: -20,
+                    right: -20
+                }
+            },
+
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + "تومان";
+                    }
+                },
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#walletChart"), walletChart);
+        chart.render();
+
+        if (a === 0 && b === 0) {
+            chart.updateOptions({
+                series: [1],
+                labels: [],
+                fill: {
+                    colors: ['rgba(113, 113, 113, 0.2)']
+                },
+                tooltip: {
+                    enabled: false,
+                }
+            });
+        }
+
+        $('.open-orders').click();
+
+    </script>
+
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="c9fb617fa22b98c03379f693-|49" defer></script>
+</body>
+
+</html>

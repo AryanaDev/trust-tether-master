@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle"> بازار حرفه ای </title>
+    <link rel="stylesheet" href="../panel_v2/css/datatables.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/swiper-bundle.min.css?v=0.02">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/alert.css?v=0.01">
+    <link rel="stylesheet" href="../panel_v2/css/icon.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/font.css">
+    <link rel="stylesheet" href="../panel_v2/css/grid340e.css">
+    <link rel="stylesheet" href="../panel_v2/css/style.css">
+        <link rel="stylesheet" href="../panel_v2/css/light.css">
+    <link rel="manifest" href="https://kifpool.me/panel_v2/js/manifest.json?v=0.1.9">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capab le" content="yes">
+    <link rel="apple-touch-icon" href="https://kifpool.me/panel_v2/images/pwa/icon-512x512.png">
+    <link rel="icon" href="https://kifpool.me/ui_v2/images/apple-icon.png">
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+    window.$crisp=[];window.CRISP_WEBSITE_ID="49650e8f-7d25-47e0-8170-ee9fe4ada9c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    $crisp.push(["set", "user:name", ["مهدی رنجبر"]]);
+    $crisp.push(["set", "user:phone", ["09355579327"]]);
+    $crisp.push(["set", "user:email", [""]]);
+    $crisp.push(["set", "user:avatar", ["https://kifpool.me/panel-assets/img/ava-header.png"]]);
+    $crisp.push(['do', 'chat:hide']);
+    $crisp.push(['on', 'chat:closed', function() {
+        $crisp.push(['do', 'chat:hide']);
+    }]);
+
+</script>
+</head>
+
+<body>
+    <div id="refresh-container">
+        <div id="refresh-icon"></div>
+        <div id="refresh-text">بکشید تا صفحه را رفرش کنید</div>
+    </div>
+    <div class="app-header d-flex just-between align-center" id="androidMob" style="display: none">
+        <div class="d-flex align-center">
+            <div class="icon"><img src="https://kifpool.me/panel_v2/images/pwa/icon-192x192.png" height="40px"
+                    width="40px"></div>
+            <div class="info">
+                <div><b>تراست تتر</b></div>
+                <div>نصب وب اپلیکیشن تراست تتر</div>
+            </div>
+        </div>
+        <div class="add-to-home-screen ">نصب</div>
+    </div>
+    <div class="app-header" id="iosMob" style="display: none">
+        <div class="d-flex align-center">
+            <div class="icon"><img src="https://kifpool.me/panel_v2/images/pwa/icon-192x192.png" height="40px"
+                    width="40px"></div>
+            <div class="info">
+                <div><b>تراست تتر</b></div>
+                <div>نصب وب اپلیکیشن تراست تتر</div>
+            </div>
+            <div class="install-close rt-auto red"><i class="icon-close-square4"></i></div>
+        </div>
+        <div class="install-info pd-t-10" style="line-height: 24px">
+            جهت نصب در مرورگر <span class="orange">Safari</span> ابتدا بروی آیکون <i class="icon-export-14 orange"></i>
+            تب کرده و در منوی نمایش داده شده گزینه <span class="orange">add to home screen</span> را انتخاب کنید
+        </div>
+    </div>
+    <div class="dashboard d-flex">
+
+        <div class="sidebar">
+            <div class="sidebar-hd d-flex align-start just-center">
+                <div class="logo">
+                   <img class="logo-larg light-logo" src="../panel_v2/images/logo.jpg" alt>
+                </div>
+                <div class="closemenu"><i class="icon-arrow-right"></i></div>
+            </div>
+            <div class="menu scrollhide">
+
+                <ul>
+                    <li><a href="index.html"><i class="icon-category4"></i><span>داشبورد </span></a></li>
+                    <li><a href="wallet.html"><i class="icon-strongbox-24"></i><span>کیف پول
+                                من</span></a></li>
+
+                    <li><a href="price.html"><i class="icon-candle4"></i><span>قیمت
+                                ارزهای دیجیتال</span></a></li>
+                    <li><a href="exchange.html"><i class="icon-money-send"></i><span>خرید و
+                                فروش سریع</span></a></li>
+                    <li class="active"><a href="pro-exchange.html"><i class="icon-svg"><img
+                                    src="../panel_v2/images/trad.svg" style="filter: brightness(0%) invert(100%);"></i><span>بازار حرفه ای
+                            </span></a></li>
+                                        <li><a href="activities/activities.html"><i class="icon-calendar-search"></i><span>تاریخچه</span></a></li>
+                    <li><a href="referral.html"><i class="icon-money-add4"></i><span>دعوت
+                                دوستان</span></a></li>
+                   <li><a href="profile.html"><i class="icon-setting-34"></i><span>مدیریت
+                                حساب کاربری</span></a></li>
+                </ul>
+                <ul>
+                    <!-- <li><a href="https://kifpool.me/member_v2/verify"><i class="icon-security-user"></i><span>احراز
+                                هویت</span></a></li> -->
+                    <li><a href="login.html" class="red"><i class="icon-logout"></i><span>خروج
+                                از حساب کاربری</span></a></li>
+                </ul>
+                <!-- <div class="menu-title">پشتیبانی تلفنی</div>
+                <ul>
+                    <li><a href="tel:02191306781"><i class="icon-call"></i><span class="tel">021-91306781</span></a>
+                    </li>
+                    <li><a href="javascript:;"><span>پاسخگوی تلفنی ۹ صبح الی ۹ شب</span></a></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center">
+
+                <div class="navbar d-flex align-center">
+                    <div class="menu-toggle"><i class="icon-category4"></i> <span>منو</span></div>
+                    <div class="userinfo sub">
+                        <div class="d-flex align-center">
+                            <div class="img"><img src="https://kifpool.me/panel-assets/img/ava-header.png" alt></div>
+                            <div class="info">
+                                <div class="name">مهدی رنجبر</div>
+                                <div class="userid">09355579327</div>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="https://kifpool.me/member_v2/profile"><i class="icon-personalcard"></i>
+                                        پروفایل کاربری</a></li>
+                                <li><a href="https://kifpool.me/member_v2/earn-money"><i class="icon-money-add4"></i>
+                                        کسب درآمد</a></li>
+                                <li><a href="https://kifpool.me/member_v2/verify/cards"><i class="icon-cards"></i>
+                                        افزودن حساب بانکی</a></li>
+                                <li><a href="https://kifpool.me/member_v2/logout" class="red"><i
+                                            class="icon-logout"></i> خروج از حساب</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-actions">
+                        <div class="item sub-toggle"><i class="icon-notification-bing">
+                                <div class="notifi-new"></div>
+                            </i><span>اطلاعیه ها</span>
+                            <div class="sub-box tab-container">
+
+                                <div class="checked-list scrollhide d-flex">
+                                    <div class="checked-item tab-item active" data-tab-box="allNotif">اعلانات شما</div>
+                                    <div class="checked-item tab-item" data-tab-box="arzNotif">اعلانات سیستمی</div>
+                                </div>
+                                <div class="tab-content" id="allNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="notifId10005471">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        1 ساعت پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۵ آبان ۱۴۰۲ ساعت ۱۷:۱۲ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="arzNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="system_notifId184">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز MONS از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز MONS از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف شده است.
+                                                طبق اعلام تیم توسعه دهنده ارز MONS | این ارز درحال تبدیل بروزرسانی بوده
+                                                و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی MONS کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId183">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف شده
+                                                است.
+                                                طبق اعلام تیم توسعه دهنده ارز SHARBI | این ارز درحال تبدیل بروزرسانی
+                                                بوده و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی SHARBI کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId182">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                طی پروسه تغییر نام | واریز و برداشت و ترید ارز MEME بسته خواهد شد و پس
+                                                از تغییر نام | ارز MEMEBRC در سایت لیست خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId181">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز GOB از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز GOB از لیست ارز های قابل خرید و فروش صرافی تراست تتر حذف شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | امکان پشتیبانی از ارز GOB پس از انجام
+                                                بروزرسانی وجود ندارد.
+                                                مکان برداشت این ارز برای کابران فراهم شده و کاربران باید دارایی خود را
+                                                به کیف پول های شخصی انتقال دهند.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId180">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>واریز و برداشت ارز BSV بطور موقت مسدود شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                واریز و برداشت ارز BSV بطور موقت مسدود شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | بدلیل بروزرسانی شبکه ارز | امکان واریز و
+                                                برداشت این ارز وجود ندارد.
+                                                بلافاصله پس از انجام بروزرسانی | واریز و برداشت ارز در صرافی تراست تتر
+                                                فعال خواهد شد.
+                                                امکان خرید و فروش این ارز در صرافی تراست تتر | همچنان فعال خواهد بود.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-center just-between pd-t-10">
+                                    <button class="btn btn-gray showall"
+                                        style="margin-right: auto; margin-left: 10px;     font: 13px/30px YekanBakh, ficon, Tahoma, Arial, sans-serif;">خواندن
+                                        همه</button>
+                                    <a href="https://kifpool.me/member_v2/notifications" class="btn btn-green">همه اعلان
+                                        ها</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item sub-toggle"><i class="icon-message-24"></i><span>پشتیبانی</span>
+                            <div class="sub-box">
+                                <div onclick="if (!window.__cfRLUnblockHandlers) return false; $crisp.push(['do', 'chat:show']),$crisp.push(['do', 'chat:open'])"
+                                    style="cursor: pointer" class="support-item d-flex align-center"
+                                    data-cf-modified-c9fb617fa22b98c03379f693->
+                                    <div class="icon"><i class="icon-message-notif4"></i></div>
+                                    <div class="info">پشتیبانی آنلاین</div>
+                                    <div class="chat-online"></div>
+                                </div>
+                                <a href="tel:02191306781" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-call"></i></div>
+                                    <div class="info" dir="ltr">02191306781</div>
+                                </a>
+                                <a href="https://kifpool.me/member_v2/tickets/create"
+                                    class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-message-question4"></i></div>
+                                    <div class="info">ارسال تیکت پشتیبانی</div>
+                                </a>
+                            </div>
+                        </div>
+                     <div class="item dark-toggle "><i class="icon-sun-1"></i></div>
+                    </div>
+                </div>
+                <div class="statusbar">
+                    <div class="todaydate d-flex align-center">
+                        <div class="online-state"></div>
+                        <div id="pdate"></div>
+                    </div>
+                    <div class="menu-btns">
+                        <a href="rial-action.html" class="btn btn-green">واریز تومانی</a>
+                        <a href="rial-action.html?type=withdraw" class="btn btn-gray">برداشت
+                            تومانی</a>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+
+                    <div class="content-title">
+                        <h2>لیست جفت ارزها</h2>
+                        <div class="speedbar"><a href="">حساب کاربری</a> / <span>لیست جفت ارزها</span></div>
+                    </div>
+                    <div class="section">
+                        <div class="filter-table d-flex-wrap align-center">
+
+                            <div class="search-table fix-mr5 d-flex align-center">
+                                <div class="input-text input-border" style="margin: 5px;">
+                                    <input type="text" id="searchCoins" placeholder="جستجوی ارز">
+                                    <div class="icon"><i class="icon-search-normal-1"></i></div>
+                                </div>
+                            </div>
+                            <div class="checked-list" style="margin-right: auto; margin-left: 0; flex-grow: 0">
+                                <div class="checked-item   active">
+                                    همه ارزها
+                                </div>
+                                <div class="checked-item ">
+                                    <i class="icon-star"></i> مورد علاقه
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section fix-mr15">
+                        <div class="block bg-gradianet-animation">
+                            <div id="currencyPair_wrapper" class="dataTables_wrapper no-footer">
+                                <div class="dataTables_scroll">
+                                    <div class="dataTables_scrollHead"
+                                        style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                                        <div class="dataTables_scrollHeadInner"
+                                            style="box-sizing: content-box; width: 1265.28px; padding-left: 0px; min-width: 1265.28px;">
+                                            <table class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                style="margin-left: 0px; width: 1265.28px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 270.969px;"
+                                                            aria-label="نام ارز: مرتب سازی ستون عمودی">نام ارز</td>
+                                                        <th class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 145.375px;"
+                                                            aria-label="قیمت لحظه&zwnj;ای (دلار): مرتب سازی ستون عمودی">
+                                                            قیمت لحظه&zwnj;ای (دلار)</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 143.391px;"
+                                                            aria-label="تغییرات (۲۴ ساعت): مرتب سازی ستون عمودی">تغییرات
+                                                            (۲۴ ساعت)</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 112.484px;"
+                                                            aria-label="بیشترین قیمت: مرتب سازی ستون عمودی">بیشترین قیمت
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 104.516px;"
+                                                            aria-label="کمترین قیمت: مرتب سازی ستون عمودی">کمترین قیمت
+                                                        </th>
+                                                        <th class="sorting" tabindex="0" aria-controls="currencyPair"
+                                                            rowspan="1" colspan="1" style="width: 103.516px;"
+                                                            aria-label="حجم معاملات: مرتب سازی ستون عمودی">حجم معاملات
+                                                        </th>
+                                                        <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                            style="width: 109.031px;" aria-label="عملیات">عملیات</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="dataTables_scrollBody"
+                                        style="position: relative; overflow: auto; width: 100%;">
+                                        <table id="currencyPair"
+                                            class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                            style="width: 1269px;">
+                                            <thead>
+                                                <tr style="height: 0px;">
+                                                    <td class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 270.969px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="نام ارز: مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">نام ارز</div>
+                                                    </td>
+                                                    <th class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 145.375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="قیمت لحظه&zwnj;ای (دلار): مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">قیمت لحظه&zwnj;ای
+                                                            (دلار)</div>
+                                                    </th>
+                                                    <th class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 143.391px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="تغییرات (۲۴ ساعت): مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">تغییرات (۲۴ ساعت)
+                                                        </div>
+                                                    </th>
+                                                    <th class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 112.484px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="بیشترین قیمت: مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">بیشترین قیمت</div>
+                                                    </th>
+                                                    <th class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 104.516px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="کمترین قیمت: مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">کمترین قیمت</div>
+                                                    </th>
+                                                    <th class="sorting" aria-controls="currencyPair" rowspan="1"
+                                                        colspan="1"
+                                                        style="width: 103.516px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="حجم معاملات: مرتب سازی ستون عمودی">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">حجم معاملات</div>
+                                                    </th>
+                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                        style="width: 109.031px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                        aria-label="عملیات">
+                                                        <div class="dataTables_sizing"
+                                                            style="height: 0px; overflow: hidden;">عملیات</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <tr data-lable="BTC_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('BTC_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/bitcoin.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">بیت کوین / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">BTC/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$35,973</td>
+                                                    <td class="change_percentage red">-4.5%</td>
+                                                    <td class="highest-price green">$37,959</td>
+                                                    <td class="lowest-price red">$34,655</td>
+                                                    <td class="volume">$351,248,388</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="XRP_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('XRP_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/ripple.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">ریپل / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">XRP/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.619</td>
+                                                    <td class="change_percentage red">-4.1%</td>
+                                                    <td class="highest-price green">$0.664</td>
+                                                    <td class="lowest-price red">$0.594</td>
+                                                    <td class="volume">$26,716,019</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="ETH_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('ETH_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/ethereum.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">اتریوم / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">ETH/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price red">$1,964</td>
+                                                    <td class="change_percentage red">-4.4%</td>
+                                                    <td class="highest-price green">$2,090</td>
+                                                    <td class="lowest-price red">$1,931</td>
+                                                    <td class="volume">$267,374,076</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="LTC_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('LTC_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/litecoin.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">لایت کوین / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">LTC/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$71.17</td>
+                                                    <td class="change_percentage red">-2.8%</td>
+                                                    <td class="highest-price green">$74.32</td>
+                                                    <td class="lowest-price red">$68</td>
+                                                    <td class="volume">$3,667,992</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="ADA_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('ADA_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/cardano.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">کاردانو / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">ADA/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.369</td>
+                                                    <td class="change_percentage red">-2.2%</td>
+                                                    <td class="highest-price green">$0.409</td>
+                                                    <td class="lowest-price red">$0.34</td>
+                                                    <td class="volume">$7,099,935</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="TRX_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('TRX_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/tron.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">ترون / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">TRX/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price red">$0.102</td>
+                                                    <td class="change_percentage red">-1.6%</td>
+                                                    <td class="highest-price green">$0.107</td>
+                                                    <td class="lowest-price red">$0.101</td>
+                                                    <td class="volume">$2,178,680</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="SHIB_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('SHIB_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/05/11/16207246572030.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">شیبا / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">SHIB/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.000009</td>
+                                                    <td class="change_percentage red">-2.5%</td>
+                                                    <td class="highest-price green">$0.000009</td>
+                                                    <td class="lowest-price red">$0.000008</td>
+                                                    <td class="volume">$14,557,808</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="DOGE_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('DOGE_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/dogecoin.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">دوج کوین / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">DOGE/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.08</td>
+                                                    <td class="change_percentage green">6.6%</td>
+                                                    <td class="highest-price green">$0.083</td>
+                                                    <td class="lowest-price red">$0.069</td>
+                                                    <td class="volume">$27,751,600</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="BNB_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('BNB_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/binancecoin.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">بایننس کوین / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">BNB/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$243.1</td>
+                                                    <td class="change_percentage red">-3.9%</td>
+                                                    <td class="highest-price green">$255.7</td>
+                                                    <td class="lowest-price red">$234</td>
+                                                    <td class="volume">$5,364,044</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="PEPE_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('PEPE_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2023/04/19/168189864968828421.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">پپ / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">PEPE/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.000001</td>
+                                                    <td class="change_percentage red">-8.4%</td>
+                                                    <td class="highest-price green">$0.000001</td>
+                                                    <td class="lowest-price red">$0.000001</td>
+                                                    <td class="volume">$4,160,629</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="SOL_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('SOL_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/05/17/16212359408882.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">سولانا / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">SOL/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$62.677</td>
+                                                    <td class="change_percentage red">-4.3%</td>
+                                                    <td class="highest-price green">$68.201</td>
+                                                    <td class="lowest-price red">$52.25</td>
+                                                    <td class="volume">$59,596,737</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="MATIC_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('MATIC_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/05/17/16212353548095.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">پالیگان / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">MATIC/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.862</td>
+                                                    <td class="change_percentage red">-5.8%</td>
+                                                    <td class="highest-price green">$0.963</td>
+                                                    <td class="lowest-price red">$0.836</td>
+                                                    <td class="volume">$4,603,240</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="MANA_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('MANA_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/05/22/16216889506563.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">دیسنترالند / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">MANA/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.436</td>
+                                                    <td class="change_percentage red">-3.8%</td>
+                                                    <td class="highest-price green">$0.461</td>
+                                                    <td class="lowest-price red">$0.402</td>
+                                                    <td class="volume">$684,894</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="FTM_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('FTM_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/05/17/16212382173911.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">فانتوم / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">FTM/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.355</td>
+                                                    <td class="change_percentage green">8.2%</td>
+                                                    <td class="highest-price green">$0.379</td>
+                                                    <td class="lowest-price red">$0.287</td>
+                                                    <td class="volume">$11,727,146</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="BCH_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('BCH_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/bitcoin-cash.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">بیت کوین کش / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">BCH/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$235.7</td>
+                                                    <td class="change_percentage red">-0.3%</td>
+                                                    <td class="highest-price green">$244.8</td>
+                                                    <td class="lowest-price red">$220.7</td>
+                                                    <td class="volume">$2,333,382</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="EOS_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('EOS_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/eos.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">ایاس / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">EOS/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.706</td>
+                                                    <td class="change_percentage red">-3.3%</td>
+                                                    <td class="highest-price green">$0.752</td>
+                                                    <td class="lowest-price red">$0.66</td>
+                                                    <td class="volume">$4,266,139</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="DOT_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('DOT_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/polkadot.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">پولکادات / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">DOT/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$5.421</td>
+                                                    <td class="change_percentage red">-3.6%</td>
+                                                    <td class="highest-price green">$5.8</td>
+                                                    <td class="lowest-price red">$5</td>
+                                                    <td class="volume">$4,939,492</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="LUNC_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('LUNC_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2022/05/30/165390619598253314.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">لونا کلاسیک / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">LUNC/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.00008</td>
+                                                    <td class="change_percentage red">-4.4%</td>
+                                                    <td class="highest-price green">$0.00009</td>
+                                                    <td class="lowest-price red">$0.00007</td>
+                                                    <td class="volume">$2,056,062</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="FLOKI_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('FLOKI_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/09/16/163179174345484634.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">فلوکی اینو / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">FLOKI/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.00003</td>
+                                                    <td class="change_percentage red">-6.8%</td>
+                                                    <td class="highest-price green">$0.00004</td>
+                                                    <td class="lowest-price red">$0.00003</td>
+                                                    <td class="volume">$10,381,910</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="UNFI_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('UNFI_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/06/12/16235080651990.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">یونیفای پروتکل دائو / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">UNFI/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$8.522</td>
+                                                    <td class="change_percentage red">-5.4%</td>
+                                                    <td class="highest-price green">$9.172</td>
+                                                    <td class="lowest-price red">$8.268</td>
+                                                    <td class="volume">$206,507</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="FIL_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('FIL_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/filecoin.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">فایل کوین / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">FIL/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$4.903</td>
+                                                    <td class="change_percentage red">-6.4%</td>
+                                                    <td class="highest-price green">$5.424</td>
+                                                    <td class="lowest-price red">$4.57</td>
+                                                    <td class="volume">$5,604,156</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="LUNA_USDT" class="even">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('LUNA_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/coins_assets/small/terra-luna.png"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">لونا ترا / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">LUNA/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$0.701</td>
+                                                    <td class="change_percentage red">-6.3%</td>
+                                                    <td class="highest-price green">$0.803</td>
+                                                    <td class="lowest-price red">$0.673</td>
+                                                    <td class="volume">$7,337,875</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-lable="LPT_USDT" class="odd">
+                                                    <td>
+                                                        <div class="td-arz-info d-flex align-center">
+                                                            <i onclick="if (!window.__cfRLUnblockHandlers) return false; AddToWhatchList('LPT_USDT')"
+                                                                class="bookmark icon-star4 "></i>
+                                                            <div class="arzimg" style="margin-right: 10px"><img
+                                                                    src="https://kifpool.me/uploads/2021/06/12/16235114485911.svg"
+                                                                    alt=""></div>
+                                                            <div class="info line20">
+                                                                <div class="name ">
+                                                                    <div class="fa-name">لایو پیر / تتر</div>
+                                                                </div>
+                                                                <div class="symbol">LPT/USDT</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="enfont price coin-unit-price green">$7.258</td>
+                                                    <td class="change_percentage red">-2.8%</td>
+                                                    <td class="highest-price green">$7.596</td>
+                                                    <td class="lowest-price red">$6.503</td>
+                                                    <td class="volume">$135,410</td>
+                                                    <td>
+                                                        <div class="d-flex tr-btns">
+                                                            <a href="BTC_USDT.html" class="btn btn-border">خرید و
+                                                                فروش</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalbox scrollhide timermodal">
+                    <div class="modal">
+                        <div class="modal-hd d-flex align-center just-between">
+                            <div class="title red">اطلاعیه مهم</div>
+                            <div class="time">23 اردیبهشت 1402 ساعت 14:32</div>
+                        </div>
+                        <div class="modal-main scrollhide">
+                            <div class="modal-text">
+                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h3>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
+                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                                    طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-ft d-flex just-end">
+                            <button class="btn md-close" type="button" disabled>موافقم</button>
+                            <button class="btn md-close red" type="button" disabled>بستن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    <p>تجربه خرید امن با ضمانت قیمت در تراست تتر</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kifpool.me/panel_v2/js/jquery-3.6.0.min.js"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/datatables.min.js?v=0.04"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/swiper-bundle.min.js"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/slider-option.js?v=0.05"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/pdate.min.js?v=0.1"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/cute-alert.js?=0.6.4"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/apexcharts.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/tv.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/app307f.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+    // pwa app
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/pwa-sw.js?v=0.3.1').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
+    <script src="https://kifpool.me/panel_v2/js/pwa-settings.js?v=0.1.34"
+        type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+        AMIB.showPDate("pdate")
+</script>
+    <script>
+        $('.select-coin-item').click(function () {
+
+            var data = $(this).data('click');
+
+            $('#buy-price-chart').html(data.buy);
+            $('#sell-price-chart').html(data.sell);
+            $('#change-price-chart').html(data.change + '%');
+            $('#dollar-price-chart').html(data.dollar);
+
+            $('.index-chart').prop('href', data.chart);
+            $('.index-exchange').prop('href', data.exchange);
+
+            $('.select-coin-list').css('display', 'none');
+
+        });
+
+        $('#orderTable').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            columnDefs: [
+                { orderable: false, targets: 7, width: 1, },
+            ],
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#digitalPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#rialPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        function CancellPayment(ID) {
+
+            $('.btn-cancel-toman').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: 'https://kifpool.me/member_v2/payment/cancel_payment',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-toman').html('منتظر لغو');
+                    $('.btn-cancel-toman').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-toman').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+
+        function CancellPaymentCoin(ID) {
+
+            $('.btn-cancel-coin').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: 'https://kifpool.me/member_v2/payment/cancel_payment_coin',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-coin').html('منتظر لغو');
+                    $('.btn-cancel-coin').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-coin').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+
+    </script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+        var a = $('#walletChart').data('btc-balance');
+        var b = $('#walletChart').data('toman-balance');
+        var d = 0;
+        var walletChart = {
+            series: [a,b,d],
+            labels: [' موجودی ارزی', ' موجودی تومانی' , 'موجودی لیر'],
+            chart: {
+                type: 'donut',
+                width: '100%'
+            },
+            // responsive: [{
+            //     breakpoint: 480,
+            //     options: {
+            //         chart: {
+            //             width: '120px'
+            //         }
+            //     }
+            // }],
+            legend: {
+                show: false,
+            },
+            plotOptions: {
+                pie: {
+                    startAngle: 0,
+                    donut: {
+                        size: '70%',
+                        dataLabels: {
+                            enabled: false
+                        },
+                    }
+                },
+            },
+
+            dataLabels: {
+                enabled: false
+            },
+
+            fill: {
+                width: 20,
+                type: 'solid',
+                lineCap: 'round',
+                colors: ['#FFC045', '#28c666' , '#43c1ff']
+            },
+            stroke: {
+                show: true,
+                lineCap: 'round',
+                width: 0,
+                colors: ['#0C111A00']
+            },
+            grid: {
+                padding: {
+                    left: -20,
+                    right: -20
+                }
+            },
+
+            tooltip: {
+                y: {
+                    formatter: function(val) {
+                        return val.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + "تومان";
+                    }
+                },
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#walletChart"), walletChart);
+        chart.render();
+
+        if (a === 0 && b === 0 ) {
+            chart.updateOptions({
+                series: [1],
+                labels: [],
+                fill: {
+                    colors: ['rgba(113, 113, 113, 0.2)']
+                },
+                tooltip: {
+                    enabled: false,
+                }
+            });
+        }
+
+        $('.open-orders').click() ;
+
+    </script>
+
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="c9fb617fa22b98c03379f693-|49" defer></script>
+</body>
+
+</html>

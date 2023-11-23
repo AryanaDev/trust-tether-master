@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle"> داشبورد </title>
+    <link rel="stylesheet" href="../panel_v2/css/datatables.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/swiper-bundle.min.css?v=0.02">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/alert.css?v=0.01">
+    <link rel="stylesheet" href="../panel_v2/css/icon.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/font.css">
+    <link rel="stylesheet" href="../panel_v2/css/grid340e.css">
+    <link rel="stylesheet" href="../panel_v2/css/style.css">
+    <link rel="stylesheet" href="../panel_v2/css/light.css">
+    <link rel="manifest" href="https://kifpool.me/panel_v2/js/manifest.json?v=0.1.9">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capab le" content="yes">
+    <link rel="apple-touch-icon" href="https://kifpool.me/panel_v2/images/pwa/icon-512x512.png">
+    <link rel="icon" href="https://kifpool.me/ui_v2/images/apple-icon.png">
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+    window.$crisp=[];window.CRISP_WEBSITE_ID="49650e8f-7d25-47e0-8170-ee9fe4ada9c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    $crisp.push(["set", "user:name", ["مهدی رنجبر"]]);
+    $crisp.push(["set", "user:phone", ["09355579327"]]);
+    $crisp.push(["set", "user:email", [""]]);
+    $crisp.push(["set", "user:avatar", ["https://kifpool.me/panel-assets/img/ava-header.png"]]);
+    $crisp.push(['do', 'chat:hide']);
+    $crisp.push(['on', 'chat:closed', function() {
+        $crisp.push(['do', 'chat:hide']);
+    }]);
+
+</script>
+</head>
+
+<body>
+    <div id="refresh-container">
+        <div id="refresh-icon"></div>
+        <div id="refresh-text">بکشید تا صفحه را رفرش کنید</div>
+    </div>
+
+
+    <div class="dashboard d-flex">
+
+        <div class="sidebar">
+            <div class="sidebar-hd d-flex align-start just-center">
+                <div class="logo">
+                    <img class="logo-larg light-logo" src="../panel_v2/images/logo.jpg" alt>
+                </div>
+                <div class="closemenu"><i class="icon-arrow-right"></i></div>
+            </div>
+            <div class="menu scrollhide">
+
+                <ul>
+                    <li class="active"><a href="index.html"><i class="icon-category4"></i><span>داشبورد </span></a></li>
+                    <li><a href="wallet.html"><i class="icon-strongbox-24"></i><span>کیف پول
+                                من</span></a></li>
+
+                    <li><a href="price.html"><i class="icon-candle4"></i><span>قیمت
+                                ارزهای دیجیتال</span></a></li>
+                    <li><a href="exchange.html"><i class="icon-money-send"></i><span>خرید و
+                                فروش سریع</span></a></li>
+                    <li><a href="pro-exchange.html"><i class="icon-svg"><img
+                                    src="https://kifpool.me/panel_v2/images/trad.svg"></i><span>بازار حرفه ای
+                            </span></a></li>
+                    <li><a href="activities/activities.html"><i
+                                class="icon-calendar-search"></i><span>تاریخچه</span></a></li>
+                    <li><a href="referral.html"><i class="icon-money-add4"></i><span>دعوت
+                                دوستان</span></a></li>
+                    <li><a href="profile.html"><i class="icon-setting-34"></i><span>مدیریت
+                                حساب کاربری</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href="tickets.html"><i class="icon-support"></i><span>تیکت ها</span></a></li>
+                    <li><a href="bank-card.html"><i class="icon-cards"></i><span>کارت بانکی</span></a></li>
+                    <li><a href="login.html" class="red"><i class="icon-logout"></i><span>خروج
+                                از حساب کاربری</span></a></li>
+                </ul>
+                <!-- <div class="menu-title">پشتیبانی تلفنی</div>
+                <ul>
+                    <li><a href="tel:02191306781"><i class="icon-call"></i><span class="tel">021-91306781</span></a>
+                    </li>
+                    <li><a href="javascript:;"><span>پاسخگوی تلفنی ۹ صبح الی ۹ شب</span></a></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center">
+                <div class="navbar d-flex align-center">
+                    <div class="menu-toggle menu-hide-res"><i class="icon-category4"></i> <span>منو</span></div>
+                    <div class="userinfo sub">
+                        <div class="d-flex align-center">
+                            <div class="img"><img src="https://kifpool.me/panel-assets/img/ava-header.png" alt></div>
+                            <div class="info">
+                                <div class="name">مهدی رنجبر</div>
+                                <div class="userid">09355579327</div>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="profile.html"><i class="icon-personalcard"></i>
+                                        پروفایل کاربری</a></li>
+                                <li><a href="#"><i class="icon-money-add4"></i>
+                                        کسب درآمد</a></li>
+                                <li><a href="bank-card.html"><i class="icon-cards"></i>
+                                        افزودن حساب بانکی</a></li>
+                                <li><a href="login.html" class="red"><i class="icon-logout"></i> خروج از حساب</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-actions">
+                        <div class="item sub-toggle"><i class="icon-notification-bing">
+                                <div class="notifi-new"></div>
+                            </i><span>اطلاعیه ها</span>
+                            <div class="sub-box tab-container">
+
+                                <div class="checked-list scrollhide d-flex">
+                                    <div class="checked-item tab-item active" data-tab-box="allNotif">اعلانات شما</div>
+                                    <div class="checked-item btn-effect tab-item" data-tab-box="arzNotif">اعلانات سیستمی
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="allNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="notifId10005471">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        1 ساعت پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۵ آبان ۱۴۰۲ ساعت ۱۷:۱۲ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="arzNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="system_notifId184">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اعلام تیم توسعه دهنده ارز MONS | این ارز درحال تبدیل بروزرسانی بوده
+                                                و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی MONS کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId183">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده
+                                                است.
+                                                طبق اعلام تیم توسعه دهنده ارز SHARBI | این ارز درحال تبدیل بروزرسانی
+                                                بوده و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی SHARBI کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId182">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        2 هفته پیش
+                                                    </div>
+                                                    <h3>تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                طی پروسه تغییر نام | واریز و برداشت و ترید ارز MEME بسته خواهد شد و پس
+                                                از تغییر نام | ارز MEMEBRC در سایت لیست خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId181">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | امکان پشتیبانی از ارز GOB پس از انجام
+                                                بروزرسانی وجود ندارد.
+                                                مکان برداشت این ارز برای کابران فراهم شده و کاربران باید دارایی خود را
+                                                به کیف پول های شخصی انتقال دهند.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId180">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>واریز و برداشت ارز BSV بطور موقت مسدود شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                واریز و برداشت ارز BSV بطور موقت مسدود شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | بدلیل بروزرسانی شبکه ارز | امکان واریز و
+                                                برداشت این ارز وجود ندارد.
+                                                بلافاصله پس از انجام بروزرسانی | واریز و برداشت ارز در صرافی کیف پول من
+                                                فعال خواهد شد.
+                                                امکان خرید و فروش این ارز در صرافی کیف پول من | همچنان فعال خواهد بود.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-center just-between pd-t-10">
+                                    <button class="btn btn-gray showall btn-effect"
+                                        style="margin-right: auto; margin-left: 10px;     font: 13px/30px YekanBakh, ficon, Tahoma, Arial, sans-serif;">خواندن
+                                        همه</button>
+                                    <a href="notifications-filter.html" class="btn btn-gray btn-effect">همه اعلان
+                                        ها</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item sub-toggle"><i class="icon-message-24"></i><span>پشتیبانی</span>
+                            <div class="sub-box">
+                                <div onclick="if (!window.__cfRLUnblockHandlers) return false; $crisp.push(['do', 'chat:show']),$crisp.push(['do', 'chat:open'])"
+                                    style="cursor: pointer" class="support-item d-flex align-center"
+                                    data-cf-modified-c9fb617fa22b98c03379f693->
+                                    <div class="icon"><i class="icon-message-notif4"></i></div>
+                                    <div class="info">پشتیبانی آنلاین</div>
+                                    <div class="chat-online"></div>
+                                </div>
+                                <a href="tel:02191306781" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-call"></i></div>
+                                    <div class="info" dir="ltr">02191306781</div>
+                                </a>
+                                <a href="tickets-create.html" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-message-question4"></i></div>
+                                    <div class="info">ارسال تیکت پشتیبانی</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item dark-toggle "><i class="icon-sun-1"></i></div>
+                    </div>
+                </div>
+                <div class="statusbar">
+                    <div class="todaydate d-flex align-center">
+                        <div class="online-state"></div>
+                        <div id="pdate"></div>
+                    </div>
+                    <div class="menu-btns">
+                        <a href="rial-action.html" class="btn btn-green">واریز تومانی</a>
+                        <a href="rial-action.html?type=withdraw" class="btn btn-gray btn-effect">برداشت
+                            تومانی</a>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+
+                    <div class="content-title">
+                        <h2>داشبورد من</h2>
+                        <div class="speedbar"><a href>حساب کاربری</a> / <span>داشبورد من</span></div>
+                    </div>
+
+                    <div class="section d-flex-wrap fix-mr15">
+
+                        <div class="block pd-20 grow-2 basis400 d-flex align-center bg-gradianet-animation">
+                            <div dir="rtl" class="sc-68ef521f-0 fekkPc">
+                                <div class="simpleTradeHeader">
+                                    <h3 class="sc-d9bf1c01-0 jfLVPV">خریدوفروش
+                                        سریع</h3><a href="/profile/simple-trade"><svg width="8px" height="13px"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m2.828 7 4.95 4.95-1.414 1.415L0 7 6.364.637 7.778 2.05 2.828 7Z"
+                                                fill="#009B87"></path>
+                                        </svg></a>
+                                </div>
+                                <div class="sc-26d2e0ed-9 sc-26d2e0ed-23 jzaHyg gVMjnG">
+                                    <div class="simpleTradeInput">
+                                        <div class="sc-20335495-0 dBeRif">
+                                            <div class="sc-20335495-6 jZnUSf"><input type="text" maxlength="7"
+                                                    placeholder="مقداری بین  200,000 -  5" class="sc-20335495-2 bZtVdI"
+                                                    value="">
+                                                <div class="inputLabel"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="16" height="16" fill="none" viewBox="0 0 56 56">
+                                                        <path fill="#009B87"
+                                                            d="M27.999 51.336 2.332 26.253l9.333-20.417h32.667l9.333 20.417L28 51.336Z">
+                                                        </path>
+                                                        <path fill="#fff"
+                                                            d="M44.335 25.664c0-1.675-5.496-3.074-12.834-3.417v-3.583h9.334v-7H15.168v7h9.333v3.583c-7.337.343-12.833 1.742-12.833 3.417 0 1.675 5.496 3.074 12.833 3.417v12.916h7V29.081c7.338-.343 12.834-1.742 12.834-3.417ZM28 27.997c-7.731 0-14-1.174-14-2.625 0-1.222 4.465-2.247 10.5-2.538v3.903c1.12.07 2.287.094 3.5.094 1.214 0 2.38-.024 3.5-.094v-3.903c6.035.291 10.5 1.316 10.5 2.538 0 1.45-6.268 2.625-14 2.625Z">
+                                                        </path>
+                                                    </svg><span class="sc-d9bf1c01-0 bYPHYb">تتر</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="simpleTradeInput">
+                                        <div class="sc-20335495-0 dBeRif">
+                                            <div class="sc-20335495-6 jZnUSf"><input type="text" maxlength="13"
+                                                    placeholder="مقداری بین  10,150,000,000 -  253,750"
+                                                    class="sc-20335495-2 bZtVdI" value="">
+                                                <div class="inputLabel"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="16" height="16" fill="none">
+                                                        <circle cx="8" cy="8" r="8" fill="#3D6B99"></circle>
+                                                        <path fill="#fff"
+                                                            d="M12.113 7.355h1.297v3.459h-1.297zM6.27 6.484V5.187h3.242v1.297zM2.379 7.355h1.297v3.459H2.379z">
+                                                        </path>
+                                                        <path fill="#fff" d="M13.406 9.512v1.297H2.379V9.512z"></path>
+                                                    </svg><span class="sc-d9bf1c01-0 bYPHYb">تومان</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="simpleTradeButtons"><button height="48px" class="sc-fdade226-0 kinLFO">
+                                        <div class="buttonContainer">خرید</div>
+                                    </button><button height="48px" class="sc-fdade226-0 fEBMOm">
+                                        <div class="buttonContainer">فروش</div>
+                                    </button></div>
+                            </div>
+                        </div>
+                        <div class="block pd-20 grow-2 basis400 d-flex align-center bg-gradianet-animation">
+                            <div class="main-wallet d-flex-wrap align-center just-around grow-1">
+                                <div class="info">
+                                    <div class="hd">
+                                        <h3>ارزش کل دارایی</h3>
+                                        <span>0 تومان </span>
+                                    </div>
+                                    <div class="chart-info d-flex-wrap">
+                                        <div class="item">
+                                            <div class="chartvalue"><span style="background-color:#FFC045;"></span> 0
+                                                <strong style="font-weight: normal;font-size: 0.7em"> تومان</strong>
+                                            </div>
+                                            <span>موجودی ارزی</span>
+                                            <div>
+                                                <a href="/member_v2/exchange" class="blue">خرید و فروش ارز</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="chartvalue"><span style="background-color:#28c666;"></span> 0
+                                                <strong style="font-weight: normal;font-size: 0.7em"> تومان</strong>
+                                            </div>
+                                            <span>موجودی تومانی</span>
+                                            <div>
+                                                <a href="/member_v2/rial-action" class="blue">افزایش موجودی تومانی</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section d-flex-wrap fix-mr15">
+
+
+                        <div class="block pd-20 d-flex-wrap just-around align-center basis400 alart-ehraz"
+                            style="background-color:#0042a0;">
+                            <div class="img" style="flex-basis: 100px;"><img
+                                    src="https://kifpool.me/panel_v2/images/userverify.png" alt style="width: 100%;">
+                            </div>
+                            <div class="info" style="flex-basis: 250px; flex-grow:1; padding-right: 10px; color:#fff">
+                                <span>
+                                    احراز هویت شما تکمیل نیست جهت استفاده از تمامی امکانات صرافی احراز هویت خود را تکمیل
+                                    نمایید
+                                </span>
+                                <div class="d-flex just-end">
+                                    <a href="#" class="btn btn-green">تکمیل ثبت
+                                        نام</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block pd-20 d-flex-wrap just-around align-center basis400 alart-ehraz"
+                            style="background-color:#0042a0;">
+                            <div class="img" style="flex-basis: 100px;"><img
+                                    src="https://kifpool.me/panel_v2/images/userverify.png" alt style="width: 100%;">
+                            </div>
+                            <div class="info" style="flex-basis: 250px; flex-grow:1; padding-right: 10px; color:#fff">
+                                <span>
+                                    احراز هویت شما تکمیل نیست جهت استفاده از تمامی امکانات صرافی احراز هویت خود را تکمیل
+                                    نمایید
+                                </span>
+                                <div class="d-flex just-end">
+                                    <a href="#" class="btn btn-green">تکمیل ثبت
+                                        نام</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section fix-mr15">
+                        <div class="block">
+                            <div class="select-coin-status bg-gradianet-animation">
+
+                                <div class="select-coin-status-hd d-flex-wrap">
+
+                                    <div class="select-coins grow-1 d-flex align-center">
+                                        <div class="select-coin-active d-flex grow-1  align-center just-between">
+                                            <div class="coin-select d-flex align-center">
+                                                <div class="img"><img
+                                                        src="https://kifpool.me/uploads/2021/07/23/16270402172203.svg"
+                                                        alt></div>
+                                                <div class="info">
+                                                    <div class="name">بیبی دوج</div>
+                                                    <span>Baby Doge Coin - BABYDOGE</span>
+                                                </div>
+                                            </div>
+                                            <div class="icon"><i class="icon-arrow-down5"></i></div>
+                                        </div>
+                                        <div class="select-coin-list scrollhide">
+                                            <div class="select-coin-item active"
+                                                data-click="{&quot;buy&quot;:&quot;0 ~&quot;,&quot;sell&quot;:&quot;0 ~&quot;,&quot;change&quot;:-0.07,&quot;dollar&quot;:&quot;0.00000000128&quot;,&quot;chart&quot;:&quot;https:\/\/kifpool.me\/member_v2\/coin-detail\/baby-doge-coin&quot;,&quot;exchange&quot;:&quot;https:\/\/kifpool.me\/member_v2\/exchange?market=baby-doge-coin&quot;}"
+                                                data-symbol="GATEIO:BABYDOGEUSDT|1M">
+                                                <div class="coin-select d-flex align-center">
+                                                    <div class="img"><img
+                                                            src="https://kifpool.me/uploads/2021/07/23/16270402172203.svg"
+                                                            alt></div>
+                                                    <div class="info">
+                                                        <div class="name">بیبی دوج</div>
+                                                        <span>Baby Doge Coin - BABYDOGE</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select-coin-item"
+                                                data-click="{&quot;buy&quot;:&quot;1,896,893,768&quot;,&quot;sell&quot;:&quot;1,884,039,696&quot;,&quot;change&quot;:1.877,&quot;dollar&quot;:&quot;36,726&quot;,&quot;chart&quot;:&quot;https:\/\/kifpool.me\/member_v2\/coin-detail\/bitcoin&quot;,&quot;exchange&quot;:&quot;https:\/\/kifpool.me\/member_v2\/exchange?market=bitcoin&quot;}"
+                                                data-symbol="BINANCE:BTCUSDT|1M">
+                                                <div class="coin-select d-flex align-center">
+                                                    <div class="img"><img
+                                                            src="https://kifpool.me/coins_assets/small/bitcoin.png" alt>
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="name">بیت کوین</div>
+                                                        <span>Bitcoin - BTC</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select-coin-item"
+                                                data-click="{&quot;buy&quot;:&quot;51,650&quot;,&quot;sell&quot;:&quot;51,300&quot;,&quot;change&quot;:-0.13,&quot;dollar&quot;:&quot;1.0000&quot;,&quot;chart&quot;:&quot;https:\/\/kifpool.me\/member_v2\/coin-detail\/tether&quot;,&quot;exchange&quot;:&quot;https:\/\/kifpool.me\/member_v2\/exchange?market=tether&quot;}"
+                                                data-symbol="BINANCE:USDTUSDT|1M">
+                                                <div class="coin-select d-flex align-center">
+                                                    <div class="img"><img src="https://kifpool.me/icons/usdt.png" alt>
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="name">تتر</div>
+                                                        <span>Tether - USDT</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="coin-status-list d-flex scrollhide align-center just-between grow-1">
+                                        <div class="item pd-10">
+                                            <span id="buy-price-chart">0 ~</span>
+                                            <div class="title"><i class="icon-dollar-circle"></i> قیمت خرید</div>
+                                        </div>
+                                        <div class="item pd-10">
+                                            <span class="orange" id="sell-price-chart">0 ~</span>
+                                            <div class="title"><i class="icon-arrow-down"></i> قیمت فروش</div>
+                                        </div>
+                                        <div class="item pd-10">
+                                            <span class="red" id="change-price-chart">-0.07%</span>
+                                            <div class="title"><i class="icon-clock"></i> تغییرات ۲۴ ساعته</div>
+                                        </div>
+                                        <div class="item pd-10">
+                                            <span id="dollar-price-chart">0.00000000128</span>
+                                            <div class="title"><i class="icon-arrow-up-3"></i> قیمت دلاری </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select-coin-status-main d-flex-wrap align-center">
+
+                                    <div class="candlechart-box">
+                                        <div id="candleChart"></div>
+                                        <div class="btns d-flex-wrap just-end">
+                                            <a target="_blank" href="coin-detail.html"
+                                                class="btn btn-border index-chart"><i class="icon-candle"></i> نمودار
+                                                پیشرفته</a>
+                                            <a target="_blank" href="pro-exchange.html"
+                                                class="btn btn-border index-exchange"><i class="icon-trade"></i> خرید و
+                                                فروش</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-user-status grow-1 pd-20">
+                                        <div class="title">وضعیت حساب کاربری شما</div>
+                                        <div class="status-active orange">
+                                            <i class="icon-award"></i>
+                                            احراز هویت انجام نشده است
+                                        </div>
+                                        <div class="main-user-status-list fix-mr10">
+                                            <div class="item">
+                                                <span>مجموع واریزی های تومانی</span>
+                                                <strong>0</strong>
+                                            </div>
+                                            <div class="item">
+                                                <span>مجموع برداشت های تومانی</span>
+                                                <strong>0</strong>
+                                            </div>
+                                            <div class="item">
+                                                <span>مجموع سفارشات تکمیل شده</span>
+                                                <strong>0</strong>
+                                            </div>
+                                            <div class="item">
+                                                <span>مجموع واریز و برداشت ارزی</span>
+                                                <strong>0</strong>
+                                            </div>
+                                            <div class="item">
+                                                <span>کارمزد معاملات کوین ها</span>
+                                                <strong>1</strong>
+                                            </div>
+                                            <div class="item">
+                                                <span>کارمزد معاملات توکن ها</span>
+                                                <strong>3</strong>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex just-end">
+                                            <a href="bank-card.html" class="orange upgrade">ثبت کارت بانکی جدید <i
+                                                    class="icon-arrow-square-left"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section fix-mr15">
+                        <div class="block pd-td-20 tab-container bg-gradianet-animation">
+                            <div class="table-header">
+                                <div class="btns-table d-flex scrollhide">
+                                    <div class="tab-item btn open-orders active" data-tab-box="tabOne">معاملات باز</div>
+                                    <div class="tab-item btn" data-tab-box="tabTwo">تاریخچه معاملات</div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content active" id="tabOne" style="display: block;">
+                                <div id="orderTable_wrapper" class="dataTables_wrapper no-footer">
+                                    <div>
+                                        <div class="dataTables_scroll">
+                                            <div class="dataTables_scrollHead"
+                                                style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                                                <div class="dataTables_scrollHeadInner"
+                                                    style="box-sizing: content-box; width: 1265.28px; padding-left: 0px; min-width: 1265.28px;">
+                                                    <table
+                                                        class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                        style="margin-left: 0px; width: 1265.28px;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 76.625px;"
+                                                                    aria-label="نوع: مرتب سازی ستون عمودی">نوع</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 101.547px;"
+                                                                    aria-label="نام ارز: مرتب سازی ستون عمودی">نام ارز
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 133.453px;"
+                                                                    aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">تاریخ
+                                                                    ثبت</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 241.125px;"
+                                                                    aria-label="مبلغ تومانی سفارش: مرتب سازی ستون عمودی">
+                                                                    مبلغ تومانی سفارش</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 125.469px;"
+                                                                    aria-label="تعداد ارز: مرتب سازی ستون عمودی">تعداد
+                                                                    ارز</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 114.516px;"
+                                                                    aria-label="پر شده: مرتب سازی ستون عمودی">پر شده
+                                                                </th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="orderTable" rowspan="1" colspan="1"
+                                                                    style="width: 120.484px;"
+                                                                    aria-label="وضعیت: مرتب سازی ستون عمودی">وضعیت</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                                    style="width: 35.0625px;" aria-label="عملیات">عملیات
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="dataTables_scrollBody"
+                                                style="position: relative; overflow: auto; width: 100%;">
+                                                <table id="orderTable"
+                                                    class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                    style="width: 1269px;">
+                                                    <thead>
+                                                        <tr style="height: 0px;">
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 76.625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="نوع: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">نوع</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 101.547px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="نام ارز: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">نام ارز</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 133.453px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تاریخ ثبت
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 241.125px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="مبلغ تومانی سفارش: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">مبلغ تومانی
+                                                                    سفارش</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 125.469px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تعداد ارز: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تعداد ارز
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 114.516px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="پر شده: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">پر شده</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="orderTable" rowspan="1"
+                                                                colspan="1"
+                                                                style="width: 120.484px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="وضعیت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">وضعیت</div>
+                                                            </th>
+                                                            <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                                style="width: 35.0625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="عملیات">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">عملیات</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr class="odd">
+                                                            <td valign="top" colspan="9" class="dataTables_empty"
+                                                                style="position: relative; right: unset;">داده ای برای
+                                                                نمایش وجود ندارد</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="table-ft"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="tabTwo" style="display: none;">
+                                <div id="digitalPanding_wrapper" class="dataTables_wrapper no-footer">
+                                    <div>
+                                        <div class="dataTables_scroll">
+                                            <div class="dataTables_scrollHead"
+                                                style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                                                <div class="dataTables_scrollHeadInner"
+                                                    style="box-sizing: content-box; width: 0px; padding-left: 0px; min-width: 1265.28px;">
+                                                    <table
+                                                        class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                        style="margin-left: 0px; width: 0px;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label="نوع درخواست: مرتب سازی ستون عمودی">نوع
+                                                                    درخواست</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">تاریخ
+                                                                    ثبت</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label=" ارز: مرتب سازی ستون عمودی"> ارز</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label="تعداد: مرتب سازی ستون عمودی">تعداد</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label="وضعیت: مرتب سازی ستون عمودی">وضعیت</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="digitalPanding" rowspan="1"
+                                                                    colspan="1" style="width: 0px;"
+                                                                    aria-label="عملیات: مرتب سازی ستون عمودی">عملیات
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="dataTables_scrollBody"
+                                                style="position: relative; overflow: auto; width: 100%;">
+                                                <table id="digitalPanding"
+                                                    class="display nowrap dataTable dtr-inline collapsed no-footer"
+                                                    style="width: 0px;">
+                                                    <thead>
+                                                        <tr style="height: 0px;">
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="نوع درخواست: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">نوع درخواست
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تاریخ ثبت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تاریخ ثبت
+                                                                </div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label=" ارز: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;"> ارز</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="تعداد: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">تعداد</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="وضعیت: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">وضعیت</div>
+                                                            </th>
+                                                            <th class="sorting" aria-controls="digitalPanding"
+                                                                rowspan="1" colspan="1"
+                                                                style="width: 0px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+                                                                aria-label="عملیات: مرتب سازی ستون عمودی">
+                                                                <div class="dataTables_sizing"
+                                                                    style="height: 0px; overflow: hidden;">عملیات</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr class="odd">
+                                                            <td valign="top" colspan="9" class="dataTables_empty"
+                                                                style="position: relative; right: unset;">داده ای برای
+                                                                نمایش وجود ندارد</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="table-ft"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mobile-menu">
+                    <a href="pro-exchange.html">
+                        <img src="../panel_v2/images/trad.svg" alt="">
+                        <span>
+                            بازار
+                        </span></a>
+                    <a href="exchange.html">
+                        <i class="icon-money-send"></i>
+                        <span>
+                            خرید سریع
+                        </span></a>
+                    <a href="index.html">
+                        <i class="icon-category4"></i>
+                        <span>داشبورد،</span></a>
+                    <a onclick="openModal('Item 4')">
+                        <i class="icon-strongbox-24"></i>
+                        <span>کیف پول</span>
+                    </a>
+                    <div class="menu-toggle menu-show-res"><img src="../panel_v2/images/more.png"
+                            style="width: 30px; height: 30px; object-fit: contain;     " alt=""> <span>منو</span></div>
+                </div>
+                <!-- Modals -->
+
+                <div class="copyright text-center">
+                    <p> تجربه خرید امن با ضمانت قیمت در تراست تتر</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../panel_v2/js/jquery-3.6.0.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/datatables.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/swiper-bundle.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/slider-option.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/pdate.min.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/cute-alert.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/apexcharts.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/tv.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script src="../panel_v2/js/app307f.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+    // pwa app
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/pwa-sw.js?v=0.3.1').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
+    <script>
+        function openModal(item) {
+            document.getElementById('modalContent').innerHTML = `<h2>${item} Modal</h2><p>Modal content goes here.</p>`;
+            document.querySelector('.modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.querySelector('.modal').style.display = 'none';
+        }
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('modal')) {
+                closeModal();
+            }
+        });
+    </script>
+    <script src="../panel_v2/js/pwa-settings.js" type="c9fb617fa22b98c03379f693-text/javascript"></script>
+    <script type="c9fb617fa22b98c03379f693-text/javascript"> AMIB.showPDate("pdate")</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $('.select-coin-item').click(function () {
+
+            var data = $(this).data('click');
+
+            $('#buy-price-chart').html(data.buy);
+            $('#sell-price-chart').html(data.sell);
+            $('#change-price-chart').html(data.change + '%');
+            $('#dollar-price-chart').html(data.dollar);
+
+            $('.index-chart').prop('href', data.chart);
+            $('.index-exchange').prop('href', data.exchange);
+
+            $('.select-coin-list').css('display', 'none');
+
+        });
+
+        $('#orderTable').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            columnDefs: [
+                { orderable: false, targets: 7, width: 1, },
+            ],
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#digitalPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        $('#rialPanding').DataTable({
+            order: [],
+            scrollX: true,
+            // pageLength: 5,
+            paging: false,
+            info: false,
+            searching: false,
+            lengthChange: false,
+            dom: '< t <"table-ft" i p> >',
+            language: {
+                paginate: {
+                    next: "<i class='icon-arrow-right-3'></i>",
+                    previous: "<i class='icon-arrow-left-2'></i>",
+                }
+            },
+            initComplete: function (settings, json) {
+                function updateTable() {
+                    if ($(window).width() < 450 && $('.dataTables_empty').length > 0) {
+                        $('.dataTables_empty').attr('colspan', '4');
+                        $('.dataTables_empty').css({
+                            'position': 'sticky',
+                            'right': '-20px'
+                        })
+                    }
+                    else {
+                        $('.dataTables_empty').attr('colspan', '9');
+                        $('.dataTables_empty').css({
+                            'position': 'relative',
+                            'right': 'unset'
+                        })
+                    }
+                }
+                updateTable();
+                $(window).on('resize', function () {
+                    updateTable()
+                });
+            }
+        });
+
+        function CancellPayment(ID) {
+
+            $('.btn-cancel-toman').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: '/',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-toman').html('منتظر لغو');
+                    $('.btn-cancel-toman').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-toman').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+
+        function CancellPaymentCoin(ID) {
+
+            $('.btn-cancel-coin').html('درحال ارسال ...');
+
+            $.ajax({
+
+                url: '/',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    _token: 'Fz3bXb2SjCb8LKRZoArk872C47XxxEkVmqYfeBIx',
+                    id: ID
+                },
+                success: function (data) {
+
+                    $('.btn-cancel-coin').html('منتظر لغو');
+                    $('.btn-cancel-coin').css('background', '#afa207');
+
+                    cuteToast({
+                        type: 'success',
+                        title: 'تبریک',
+                        message: 'درخواست لغو شما با موفقیت ثبت شد .',
+                        timer: 3500,
+                    });
+
+                },
+                error: function (err) {
+
+                    $('.btn-cancel-coin').html('درخواست لغو');
+
+                    cuteToast({
+                        type: 'error',
+                        title: 'خطا',
+                        message: 'خطا در ثبت عملیات',
+                        timer: 3500,
+                    });
+
+                }
+
+            })
+
+        }
+    </script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Red', 'Blue'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, ],
+                    borderWidth: 2,
+                }]
+            },
+            style: {
+                width: 20
+            },
+            options: {
+                aspectRatio: 2,
+
+                responsive: true,
+                maintainAspectRatio: true,
+            },
+        });
+    </script>
+    <script>
+        var a = $('#walletChart').data('btc-balance');
+        var b = $('#walletChart').data('toman-balance');
+        var d = 0;
+        var walletChart = {
+            series: [a, b, d],
+            labels: [' موجودی ارزی', ' موجودی تومانی', 'موجودی لیر'],
+            chart: {
+                type: 'donut',
+                width: '100%'
+            },
+            // responsive: [{
+            //     breakpoint: 480,
+            //     options: {
+            //         chart: {
+            //             width: '120px'
+            //         }
+            //     }
+            // }],
+            legend: {
+                show: false,
+            },
+            plotOptions: {
+                pie: {
+                    startAngle: 0,
+                    donut: {
+                        size: '70%',
+                        dataLabels: {
+                            enabled: false
+                        },
+                    }
+                },
+            },
+
+            dataLabels: {
+                enabled: false
+            },
+
+            fill: {
+                width: 20,
+                type: 'solid',
+                lineCap: 'round',
+                colors: ['#FFC045', '#28c666', '#43c1ff']
+            },
+            stroke: {
+                show: true,
+                lineCap: 'round',
+                width: 0,
+                colors: ['#0C111A00']
+            },
+            grid: {
+                padding: {
+                    left: -20,
+                    right: -20
+                }
+            },
+
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + "تومان";
+                    }
+                },
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#walletChart"), walletChart);
+        chart.render();
+
+        if (a === 0 && b === 0) {
+            chart.updateOptions({
+                series: [1],
+                labels: [],
+                fill: {
+                    colors: ['rgba(113, 113, 113, 0.2)']
+                },
+                tooltip: {
+                    enabled: false,
+                }
+            });
+        }
+
+        $('.open-orders').click();
+
+    </script>
+
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="c9fb617fa22b98c03379f693-|49" defer></script>
+</body>
+
+</html>

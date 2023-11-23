@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle">نموادر ارز بیت کوین</title>
+    <link rel="stylesheet" href="../panel_v2/css/datatables.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/swiper-bundle.min.css?v=0.02">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/alert.css?v=0.01">
+    <link rel="stylesheet" href="../panel_v2/css/icon.css">
+    <link rel="stylesheet" href="https://kifpool.me/panel_v2/css/font.css">
+    <link rel="stylesheet" href="../panel_v2/css/grid340e.css">
+    <link rel="stylesheet" href="../panel_v2/css/style.css">
+        <link rel="stylesheet" href="../panel_v2/css/light.css">
+    <link rel="manifest" href="https://kifpool.me/panel_v2/js/manifest.json?v=0.1.9">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capab le" content="yes">
+    <link rel="apple-touch-icon" href="https://kifpool.me/panel_v2/images/pwa/icon-512x512.png">
+    <link rel="icon" href="https://kifpool.me/ui_v2/images/apple-icon.png">
+    <script type="c9fb617fa22b98c03379f693-text/javascript">
+
+    window.$crisp=[];window.CRISP_WEBSITE_ID="49650e8f-7d25-47e0-8170-ee9fe4ada9c7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    $crisp.push(["set", "user:name", ["مهدی رنجبر"]]);
+    $crisp.push(["set", "user:phone", ["09355579327"]]);
+    $crisp.push(["set", "user:email", [""]]);
+    $crisp.push(["set", "user:avatar", ["https://kifpool.me/panel-assets/img/ava-header.png"]]);
+    $crisp.push(['do', 'chat:hide']);
+    $crisp.push(['on', 'chat:closed', function() {
+        $crisp.push(['do', 'chat:hide']);
+    }]);
+
+</script>
+</head>
+
+<body>
+    <div id="refresh-container">
+        <div id="refresh-icon"></div>
+        <div id="refresh-text">بکشید تا صفحه را رفرش کنید</div>
+    </div>
+    <div class="app-header d-flex just-between align-center" id="androidMob" style="display: none">
+        <div class="d-flex align-center">
+            <div class="install-close rt-auto red"><i class="icon-close-square4"></i></div>
+            <div class="icon"><img src="https://kifpool.me/panel_v2/images/pwa/icon-192x192.png" height="40px"
+                    width="40px"></div>
+            <div class="info">
+                <div><b>کیف پول من</b></div>
+                <div>نصب وب اپلیکیشن کیف پول من</div>
+            </div>
+        </div>
+        <div class="add-to-home-screen ">نصب</div>
+    </div>
+    <div class="app-header" id="iosMob" style="display: none">
+        <div class="d-flex align-center">
+            <div class="icon"><img src="https://kifpool.me/panel_v2/images/pwa/icon-192x192.png" height="40px"
+                    width="40px"></div>
+            <div class="info">
+                <div><b>کیف پول من</b></div>
+                <div>نصب وب اپلیکیشن کیف پول من</div>
+            </div>
+            <div class="install-close rt-auto red"><i class="icon-close-square4"></i></div>
+        </div>
+        <div class="install-info pd-t-10" style="line-height: 24px">
+            جهت نصب در مرورگر <span class="orange">Safari</span> ابتدا بروی آیکون <i class="icon-export-14 orange"></i>
+            تب کرده و در منوی نمایش داده شده گزینه <span class="orange">add to home screen</span> را انتخاب کنید
+        </div>
+    </div>
+    <div class="dashboard d-flex">
+
+        <div class="sidebar">
+            <div class="sidebar-hd d-flex align-start just-center">
+                <div class="logo">
+                   <img class="logo-larg light-logo" src="../panel_v2/images/logo.jpg" alt>
+                </div>
+                <div class="closemenu"><i class="icon-arrow-right"></i></div>
+            </div>
+            <div class="menu scrollhide">
+              
+                <ul>
+                    <li class="active"><a href="index.html"><i class="icon-category4"></i><span>داشبورد </span></a></li>
+                    <li><a href="wallet.html"><i class="icon-strongbox-24"></i><span>کیف پول
+                                من</span></a></li>
+
+                    <li><a href="price.html"><i class="icon-candle4"></i><span>قیمت
+                                ارزهای دیجیتال</span></a></li>
+                    <li><a href="exchange.html"><i class="icon-money-send"></i><span>خرید و
+                                فروش سریع</span></a></li>
+                    <li><a href="pro-exchange.html"><i class="icon-svg"><img
+                                    src="https://kifpool.me/panel_v2/images/trad.svg"></i><span>بازار حرفه ای
+                            </span></a></li>
+                                        <li><a href="activities/activities.html"><i class="icon-calendar-search"></i><span>تاریخچه</span></a></li>
+                    <li><a href="referral.html"><i class="icon-money-add4"></i><span>دعوت
+                                دوستان</span></a></li>
+                   <li><a href="profile.html"><i class="icon-setting-34"></i><span>مدیریت
+                                حساب کاربری</span></a></li>
+                </ul>
+                <ul>
+                    <!-- <li><a href="https://kifpool.me/member_v2/verify"><i class="icon-security-user"></i><span>احراز
+                                هویت</span></a></li> -->
+                    <li><a href="login.html" class="red"><i class="icon-logout"></i><span>خروج
+                                از حساب کاربری</span></a></li>
+                </ul>
+                <!-- <div class="menu-title">پشتیبانی تلفنی</div>
+                <ul>
+                    <li><a href="tel:02191306781"><i class="icon-call"></i><span class="tel">021-91306781</span></a>
+                    </li>
+                    <li><a href="javascript:;"><span>پاسخگوی تلفنی ۹ صبح الی ۹ شب</span></a></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="center">
+
+                <div class="navbar d-flex align-center">
+                    <div class="menu-toggle"><i class="icon-category4"></i> <span>منو</span></div>
+                    <div class="userinfo sub">
+                        <div class="d-flex align-center">
+                            <div class="img"><img src="https://kifpool.me/panel-assets/img/ava-header.png" alt></div>
+                            <div class="info">
+                                <div class="name">مهدی رنجبر</div>
+                                <div class="userid">09355579327</div>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="https://kifpool.me/member_v2/profile"><i class="icon-personalcard"></i>
+                                        پروفایل کاربری</a></li>
+                                <li><a href="https://kifpool.me/member_v2/earn-money"><i class="icon-money-add4"></i>
+                                        کسب درآمد</a></li>
+                                <li><a href="https://kifpool.me/member_v2/verify/cards"><i class="icon-cards"></i>
+                                        افزودن حساب بانکی</a></li>
+                                <li><a href="https://kifpool.me/member_v2/logout" class="red"><i
+                                            class="icon-logout"></i> خروج از حساب</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-actions">
+                        <div class="item sub-toggle"><i class="icon-notification-bing">
+                                <div class="notifi-new"></div>
+                            </i><span>اطلاعیه ها</span>
+                            <div class="sub-box tab-container">
+
+                                <div class="checked-list scrollhide d-flex">
+                                    <div class="checked-item tab-item active" data-tab-box="allNotif">اعلانات شما</div>
+                                    <div class="checked-item tab-item" data-tab-box="arzNotif">اعلانات سیستمی</div>
+                                </div>
+                                <div class="tab-content" id="allNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="notifId10071531">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        5 ساعت پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۹ آبان ۱۴۰۲ ساعت ۱۴:۱۸ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10060290">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        22 ساعت پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۸ آبان ۱۴۰۲ ساعت ۲۱:۲۷ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10051019">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        1 روز پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۸ آبان ۱۴۰۲ ساعت ۱۳:۱۶ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="notifId10005471">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        4 روز پیش
+                                                    </div>
+                                                    <h3>ورود موفق به حساب</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ورود موفق به حساب کاربری در تاریخ ۲۵ آبان ۱۴۰۲ ساعت ۱۷:۱۲ با دستگاه
+                                                desktop
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="arzNotif">
+                                    <div class="notifi-list scrollhide">
+                                        <div class="notifi-item noshow" id="system_notifId185">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        1 روز پیش
+                                                    </div>
+                                                    <h3>مارکت و انتقال ارز MELI بطور موقت با اختلال مواجه شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                بدلیل نوسان ارز MELI و جلوگیری از | از بین رفتن دارایی کاربران | خرید و
+                                                فروش و انتقال این ارز توسط مارکت مبدا بطور موفت از دسترس خارج شده است.
+                                                بلافاصله پس از فعال شدن ارز از سمت مبدا | این ارز داخل صرافی کیف پول من
+                                                فعال خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId184">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز MONS از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اعلام تیم توسعه دهنده ارز MONS | این ارز درحال تبدیل بروزرسانی بوده
+                                                و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی MONS کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId183">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز SHARBI از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده
+                                                است.
+                                                طبق اعلام تیم توسعه دهنده ارز SHARBI | این ارز درحال تبدیل بروزرسانی
+                                                بوده و شبکه مبدا , از نسخه جدید این ارز پشتیبانی نخواهد کرد.
+                                                دارایی SHARBI کاربران بطور خودکار فروخته شده و معادل دلاری این ارز بصورت
+                                                تتر برای هولدر های این ارز واریز شده است.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId182">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                تغییر نام ارز MEME به ارز MEMEBRC بطور خودکار انجام خواهد شد.
+                                                طی پروسه تغییر نام | واریز و برداشت و ترید ارز MEME بسته خواهد شد و پس
+                                                از تغییر نام | ارز MEMEBRC در سایت لیست خواهد شد.
+                                            </div>
+                                        </div>
+                                        <div class="notifi-item noshow" id="system_notifId181">
+                                            <div class="notifi-item-hd d-flex align-center">
+                                                <div class="icon"><i class="icon-notification-bing"></i></div>
+                                                <div class="info">
+                                                    <div class="date">
+                                                        3 هفته پیش
+                                                    </div>
+                                                    <h3>ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف
+                                                        شده است.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="notifi-text drop-slide">
+                                                ارز GOB از لیست ارز های قابل خرید و فروش صرافی کیف پول من حذف شده است.
+                                                طبق اطلاع رسانی شبکه مبدا | امکان پشتیبانی از ارز GOB پس از انجام
+                                                بروزرسانی وجود ندارد.
+                                                مکان برداشت این ارز برای کابران فراهم شده و کاربران باید دارایی خود را
+                                                به کیف پول های شخصی انتقال دهند.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-center just-between pd-t-10">
+                                    <button class="btn btn-black showall"
+                                        style="margin-right: auto; margin-left: 10px;">خواندن همه</button>
+                                    <a href="https://kifpool.me/member_v2/notifications" class="btn btn-blue">همه اعلان
+                                        ها</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item sub-toggle"><i class="icon-message-24"></i><span>پشتیبانی</span>
+                            <div class="sub-box">
+                                <div onclick="if (!window.__cfRLUnblockHandlers) return false; $crisp.push(['do', 'chat:show']),$crisp.push(['do', 'chat:open'])"
+                                    style="cursor: pointer" class="support-item d-flex align-center"
+                                    data-cf-modified-557d27a98eb5b59f2125f759->
+                                    <div class="icon"><i class="icon-message-notif4"></i></div>
+                                    <div class="info">پشتیبانی آنلاین</div>
+                                    <div class="chat-online"></div>
+                                </div>
+                                <a href="tel:02191306781" class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-call"></i></div>
+                                    <div class="info" dir="ltr">02191306781</div>
+                                </a>
+                                <a href="https://kifpool.me/member_v2/tickets/create"
+                                    class="support-item d-flex align-center">
+                                    <div class="icon"><i class="icon-message-question4"></i></div>
+                                    <div class="info">ارسال تیکت پشتیبانی</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item dark-toggle"><i class="icon-sun-1"></i></div>
+                    </div>
+                </div>
+                <div class="statusbar">
+                    <div class="todaydate d-flex align-center">
+                        <div class="online-state"></div>
+                        <div id="pdate"></div>
+                    </div>
+                    <div class="menu-btns">
+                        <a href="rial-action.html" class="btn btn-green">واریز تومانی</a>
+                        <a href="https://kifpool.me/member_v2/rial-action?type=withdraw" class="btn btn-gray">برداشت
+                            تومانی</a>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="section maximize-box ">
+                        <div class="btns d-flex align-center scrollhide" style="padding: 2px 1px; margin-right: -10px;">
+                            <button class="btn btn-border pro-chart active"><i class="icon-candle"></i> پیشرفته</button>
+                            <button class="btn btn-border esay-chart"><i class="icon-candle"></i> ساده</button>
+                            <button class="btn btn-border md-open" style="margin-left: 10px" data-modal="modal-buy">
+                                <div class="img"><img src="https://kifpool.me/coins_assets/small/bitcoin.png"></div>بیت
+                                کوین <i class="icon-arrow-left-2"></i>
+                            </button>
+                            <div class="btn btn-border maximize"
+                                style="cursor: pointer; margin-right: auto !important;"><i class="icon-maximize-44"></i>
+                                تمام صفحه</div>
+                        </div>
+                        <div id="Chart1" class="pd-td-20"></div>
+                        <div class="btns d-flex just-between pd-d-10" style="margin-right: -10px;">
+                            <a href="history.go(-1)" class="btn btn-border"><i class="icon-arrow-right-3"></i>
+                                بازگشت</a>
+                            <a href="BTC_USDT.html" class="btn btn-green"><i
+                                    class="icon-trade"></i> خرید و فروش</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modalbox scrollhide modal-buy">
+                    <div class="modal tab-container">
+                        <div class="tabs-list d-flex text-center">
+                            <div class="tab-item tab-btn" data-tab-box="tabTwo">همه ارزها</div>
+                            <div class="tab-item tab-btn" data-tab-box="tabOne">موجودی شما</div>
+                        </div>
+                        <div class="modal-main scorllstyle " style="max-height: 450px;">
+                            <div class="mb-10 fix-mr10 d-flex align-center">
+                                <div class="input-text input-border">
+                                    <div class="img"><i class="icon-search-normal-1"></i></div>
+                                    <input type="text" placeholder="جستجوی ارز" name id="searchCoins" required>
+                                </div>
+                                <div class="inputlang btn-lang togglebox">
+                                    <span>EN</span>
+                                    <div class="mini-toggle"></div>
+                                </div>
+                            </div>
+                            <div id="tabTwo" class="tab-content ">
+                                <div class="modal-coin-list">
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/bitcoin'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/coins_assets/small/bitcoin.png"
+                                                alt="بیت کوین"></div>
+                                        <span class="fa-name">بیت کوین</span>
+                                        <span class="en-name">Bitcoin</span>
+                                        <span>BTC</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/ethereum'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/coins_assets/small/ethereum.png"
+                                                alt="اتریوم"></div>
+                                        <span class="fa-name">اتریوم</span>
+                                        <span class="en-name">Ethereum</span>
+                                        <span>ETH</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/ripple'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/coins_assets/small/ripple.png"
+                                                alt="ریپل"></div>
+                                        <span class="fa-name">ریپل</span>
+                                        <span class="en-name">XRP</span>
+                                        <span>XRP</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/tether'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/icons/usdt.png" alt="تتر"></div>
+                                        <span class="fa-name">تتر</span>
+                                        <span class="en-name">Tether</span>
+                                        <span>USDT</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/bitcoin-cash'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img
+                                                src="https://kifpool.me/coins_assets/small/bitcoin-cash.png"
+                                                alt="بیت کوین کش"></div>
+                                        <span class="fa-name">بیت کوین کش</span>
+                                        <span class="en-name">Bitcoin-Cash</span>
+                                        <span>BCH</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/litecoin'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/coins_assets/small/litecoin.png"
+                                                alt="لایت کوین"></div>
+                                        <span class="fa-name">لایت کوین</span>
+                                        <span class="en-name">Litecoin</span>
+                                        <span>LTC</span>
+                                    </div>
+                                    <div onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = 'https://kifpool.me/member_v2/coin-detail/chainlink'"
+                                        class="coin-item change-name d-flex align-center coin__item existed_item"
+                                        data-cf-modified-557d27a98eb5b59f2125f759->
+                                        <div class="img"><img src="https://kifpool.me/coins_assets/small/chainlink.png"
+                                                alt="چین لینک"></div>
+                                        <span class="fa-name">چین لینک</span>
+                                        <span class="en-name">Chainlink</span>
+                                        <span>LINK</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tabOne" class="tab-content ">
+                                <div class="modal-coin-list">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-ft d-flex just-end">
+                            <button class="btn md-close red" type="button">بستن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    <p>همیشه یه دلیل وجود داره برای چیزهای خوب ، اینجا اتفاقات خوبی می افتد و همه‌اش در مورد شماست.</p>
+                    <div>داشبورد کیف پول من نسخه 1.0.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kifpool.me/panel_v2/js/jquery-3.6.0.min.js"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/datatables.min.js?v=0.04"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/swiper-bundle.min.js"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/slider-option.js?v=0.05"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/pdate.min.js?v=0.1"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script src="https://kifpool.me/panel_v2/js/cute-alert.js?=0.6.4"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script type="557d27a98eb5b59f2125f759-text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script src="https://kifpool.me/panel_v2/js/app.js?v=0.054.111"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script type="557d27a98eb5b59f2125f759-text/javascript">
+    // pwa app
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/pwa-sw.js?v=0.3.1').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
+    <script src="https://kifpool.me/panel_v2/js/pwa-settings.js?v=0.1.36"
+        type="557d27a98eb5b59f2125f759-text/javascript"></script>
+    <script type="557d27a98eb5b59f2125f759-text/javascript">
+
+        AMIB.showPDate("pdate")
+</script>
+    <script type="557d27a98eb5b59f2125f759-text/javascript">
+        $(document).ready(function() {
+            var chartColor = document.body.classList.contains('light') ? '#fff' : '#fff';
+            var chartTheme = document.body.classList.contains('light') ? 'light' : '#fff';
+            var chartOptions = {
+                width: '100%',
+                height: '600px',
+                symbol: "BINANCE:BTCUSDT",
+                interval: "1",
+                timezone: "exchange",
+                theme: chartTheme,
+                backgroundColor: chartColor,
+                style: "1",
+                locale: "en",
+                // toolbar_bg: "#f1f3f6",
+                enable_publishing: false,
+                withdateranges: true,
+                hide_side_toolbar: false,
+                allow_symbol_change: true,
+                save_image: false,
+                details: true,
+                hotlist: true,
+                calendar: true,
+                studies: ['Volume@tv-basicstudies'],
+                container_id: "Chart1"
+            };
+            var widget = new TradingView.widget(chartOptions);
+
+            $('.maximize').on('click', function() {
+                $('.maximize-box').toggleClass('active');
+                if ($('.maximize-box').hasClass('active')) {
+                    chartOptions.height = $(window).height() - 190 + "px";
+                    $('.maximize').html('<i class="icon-maximize-44"></i>' + 'کوچک کردن');
+                } else {
+                    chartOptions.height = '600px';
+                    $('.maximize').html('<i class="icon-maximize-44"></i>' + 'تمام صفحه');
+                }
+                widget = new TradingView.widget(chartOptions);
+            });
+
+            $('.dark-toggle').on('click', function() {
+                chartOptions.theme = $('body').hasClass('light') ? 'light' : 'dark';
+                chartOptions.backgroundColor = $('body').hasClass('light') ? '#fff' : '#141a22';
+                widget = new TradingView.widget(chartOptions);
+            });
+
+            $('.esay-chart').on('click' , function() {
+                $('.pro-chart').removeClass('active');
+                $(this).addClass('active');
+                chartOptions.details = false;
+                chartOptions.hotlist = false;
+                chartOptions.calendar = false;
+                chartOptions.hide_side_toolbar = true;
+                chartOptions.withdateranges = false;
+                chartOptions.studies = false;
+                widget = new TradingView.widget(chartOptions);
+            });
+
+            $('.pro-chart').on('click' , function() {
+                $('.esay-chart').removeClass('active');
+                $(this).addClass('active');
+                chartOptions.details = true;
+                chartOptions.hotlist = true;
+                chartOptions.calendar = true;
+                chartOptions.hide_side_toolbar = false;
+                chartOptions.withdateranges = true;
+                widget = new TradingView.widget(chartOptions);
+            });
+
+        });
+    </script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script type="557d27a98eb5b59f2125f759-text/javascript">
+
+        var typingTimer;
+        var doneTypingInterval = 1000;
+        var $input = $('#searchCoins');
+
+        $input.on('keyup', function () {
+
+
+            $('.existed_item').addClass('hidden');
+            $('.search_item').remove();
+
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+
+        });
+
+        $input.on('keydown', function () {
+            clearTimeout(typingTimer);
+        });
+
+        function doneTyping () {
+
+            var value = $input.val() ;
+
+            if(value === ''){
+
+                $('.existed_item').removeClass('hidden');
+                $('.search_item').remove();
+
+            }
+            else{
+
+                var text = value.toLowerCase();
+
+                $.ajax({
+                    url : 'https://kifpool.me/member_v2/search-coin' ,
+                    method : 'GET' ,
+                    dataType : 'JSON' ,
+                    data : {
+                        q : text
+                    } ,
+                    success : function(data){
+
+
+                        $('.search_item').remove();
+
+                        if(data.count !== 0){
+
+                            $.each(data.list,function(index,value){
+
+
+                                $( ".modal-coin-list").append('<div onclick="location.href = \'https://kifpool.me/member_v2/coin-detail/'+value.name_id+'\'" class="coin-item change-name d-flex align-center coin__item existed_item">'+
+                                    '<div class="img"><img src="https://kifpool.me/'+value.small_image+'" ></div>'+
+                                    '<span class="fa-name">'+value.fa_name+'</span>'+
+                                    '<span class="en-name">'+value.name+'</span>'+
+                                    '<span>'+value.symbol.toUpperCase()+'</span>'+
+                                    '</div>');
+
+                            });
+
+                        }
+
+                    }
+                })
+
+            }
+
+        }
+
+    </script>
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="557d27a98eb5b59f2125f759-|49" defer></script>
+</body>
+
+</html>
